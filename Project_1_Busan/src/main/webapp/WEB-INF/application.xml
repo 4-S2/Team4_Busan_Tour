@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+  <bean id="main" class="com.sist.model.MainModel"/>
+  <bean id="busan" class="com.sist.model.BusanListModel"/>
+  <bean id="ex" class="com.sist.model.ExListModel"/>
+  
+   
+</beans>
