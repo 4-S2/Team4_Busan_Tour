@@ -3,8 +3,7 @@ import java.util.*;
 
 import com.sist.dbcp.CreateDBCPConnection;
 import com.sist.model.BusanListModel;
-import com.sist.vo.BusanListVO;
-
+import com.sist.vo.*;
 
 import java.sql.*;
 public class BusanDAO {
@@ -133,6 +132,45 @@ public class BusanDAO {
 		   dbconn.disConnection(conn, ps);
 	   }
 	   return list;
+   }
+   
+// TOP 3 특산물 리스트 출력
+   public List<GoodsVO> goodsfindTop3()
+   {
+      List<GoodsVO> list=new ArrayList<>();
+      try
+      {
+         // 1. 연결 
+         conn=dbconn.getConnection();
+         // 2. SQL문장 전송 
+         String sql="SELECT gno,gname,poster FROM goods "
+                 +"WHERE gno IN(76,157,12)";
+         // 3. 미리 전송 
+         ps=conn.prepareStatement(sql);
+         // 4. 실행 요청전에 ?에 값을 채운다 
+         
+         // 5. 실행후에 결과값을 받는다 
+         ResultSet rs=ps.executeQuery();
+         while(rs.next()) // 출력 1번째 위치부터 읽기 시작 
+         {
+            GoodsVO vo=new GoodsVO();
+            vo.setGno(rs.getInt(1));
+            vo.setGname(rs.getString(2));
+            vo.setPoster(rs.getString(3));
+            list.add(vo);
+         }
+         rs.close();
+      }catch(Exception ex)
+      {
+        // 에러 출력 
+         ex.printStackTrace();
+      }
+      finally
+      {
+         // 반환 => 재사용 
+         dbconn.disConnection(conn, ps);
+      }
+      return list;
    }
 
    
