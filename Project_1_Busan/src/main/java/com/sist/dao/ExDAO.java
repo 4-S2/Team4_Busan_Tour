@@ -113,6 +113,7 @@ public class ExDAO {
 	            vo.setEno(rs.getInt(1));
 	            vo.setEname(rs.getString(2));
 	            vo.setPoster(rs.getString(3));
+	            vo.setElike(rs.getInt(4));
 	            list.add(vo);
 	        }
 	    } catch (Exception ex) {
