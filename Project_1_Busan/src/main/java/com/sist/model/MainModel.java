@@ -34,6 +34,10 @@ public class MainModel {
 		 List<BusanListVO> fdtoplist = topdao.findTop3("food");
 		 request.setAttribute("fdtoplist", fdtoplist);
 		 
+		// 인기 명소 Top 6 
+		 List<BusanListVO> ttoplist = topdao.findTop3("tour");
+		 request.setAttribute("tTopList", ttoplist);
+		 
 		 List<ExVO> exToplist = exTopDao.mainpage_exData();
 		 request.setAttribute("exToplist", exToplist);
 		

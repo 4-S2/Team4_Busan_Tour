@@ -24,8 +24,17 @@ public class BusanListModel {
 		  List<BusanListVO> list=dao.BusanListData(curpage,"festival");
 		  int totalpage=dao.BusanListTotalPage("festival");
 		  
+		   final int BLOCK=5;
+		   int startPage=((curpage-1)/BLOCK*BLOCK)+1;
+		   int endPage=((curpage-1)/BLOCK*BLOCK)+BLOCK;
+		   
+		   if(endPage>totalpage)
+			   endPage=totalpage;
+		  
 		  request.setAttribute("curpage", curpage);
 		  request.setAttribute("totalpage", totalpage);
+		   request.setAttribute("startPage", startPage);
+		   request.setAttribute("endPage", endPage);
 		  request.setAttribute("list", list);
 		  //3. 결과값 모아서 request에 저장 
 		  request.setAttribute("main_jsp", "../busan/festival.jsp");

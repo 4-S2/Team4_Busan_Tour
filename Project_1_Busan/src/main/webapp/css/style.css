@@ -2795,13 +2795,13 @@ td,th{padding:0}
 }
 
 #mainVisual .tourSlide .slide1{
-  background-image: url("https://assets.website-files.com/5badda2935e11303a89a461e/5baddd4835e113c6299a48f5_li-tzuni-507346-unsplash.jpg");
+  background-image: url("../main/1.jpg");
 }
 #mainVisual .tourSlide .slide2{
-  background-image: url("https://assets.website-files.com/5badda2935e11303a89a461e/5baddd4835e113c6299a48f5_li-tzuni-507346-unsplash.jpg");
+  background-image: url("../main/2.png");
 }
 #mainVisual .tourSlide .slide3{
-  background-image: url("https://assets.website-files.com/5badda2935e11303a89a461e/5baddd4835e113c6299a48f5_li-tzuni-507346-unsplash.jpg");
+  background-image: url("../main/3.jpg");
 }
 
 /*#mainVisual .weather{
