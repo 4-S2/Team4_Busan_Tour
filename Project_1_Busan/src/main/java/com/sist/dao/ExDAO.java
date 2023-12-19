@@ -1,5 +1,6 @@
 package com.sist.dao;
 import java.util.*;
+import java.text.*;
 
 import com.sist.dbcp.CreateDBCPConnection;
 import com.sist.model.BusanListModel;
@@ -99,9 +100,9 @@ public class ExDAO {
 	        // 1. 연결
 	        conn = dbconn.getConnection();
 	        // 2. SQL dictionary
-	        String sql = "SELECT eno, ename, poster, elike "
-	                + "FROM (SELECT eno, ename, poster, elike, rownum as num "
-	                + "FROM (SELECT eno, ename, poster, elike "
+	        String sql = "SELECT eno, ename, poster, TO_CHAR(s_date, 'YYYY-MM-DD') AS s_date, TO_CHAR(e_date, 'YYYY-MM-DD') AS e_date "
+	                + "FROM (SELECT eno, ename, poster, s_date, e_date , rownum as num "
+	                + "FROM (SELECT eno, ename, poster,s_date, e_date   "
 	                + "FROM exhibition ORDER BY elike DESC) "
 	                + "WHERE rownum <= 4)";
 
@@ -113,7 +114,10 @@ public class ExDAO {
 	            vo.setEno(rs.getInt(1));
 	            vo.setEname(rs.getString(2));
 	            vo.setPoster(rs.getString(3));
-	            vo.setElike(rs.getInt(4));
+	            
+	            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	            vo.setS_date(dateFormat.format(rs.getDate(4)));
+		        vo.setE_date(dateFormat.format(rs.getDate(5)));
 	            list.add(vo);
 	        }
 	    } catch (Exception ex) {
@@ -132,6 +136,65 @@ public class ExDAO {
 
 	    return list;
 	}
+   
+   public List<ExVO> exDetailData(int eno)
+   {
+	   List<ExVO> list=new ArrayList<ExVO>();
+	   try
+	   {
+		   // 1. 연결 
+		   conn=dbconn.getConnection();
+		   // 2. SQL문장 전송 
+		   String sql = "SELECT eno, ename, eename, efield, eitem, cate, homepage, " +
+                   "TO_CHAR(s_date, 'YYYY-MM-DD') AS s_date, TO_CHAR(e_date, 'YYYY-MM-DD') AS e_date, " +
+                   "loc, loc_detail, host, poster, elike, jjim, score, price, hit " +
+                   "FROM exhibition " +
+                   "WHERE eno ="+eno;
+				     
+		   // 3. 미리 전송 
+		   ps=conn.prepareStatement(sql);
+		   // 4. 실행 요청전에 ?에 값을 채운다 
+		  
+		   // 5. 실행후에 결과값을 받는다 
+		   ResultSet rs=ps.executeQuery();
+		   while(rs.next()) // 출력 1번째 위치부터 읽기 시작 
+		   {
+			   ExVO vo=new ExVO();
+			   vo.setEno(rs.getInt(1));
+			   vo.setEname(rs.getString(2));
+			   vo.setEename(rs.getString(3));
+			   vo.setEfield(rs.getString(4));
+			   vo.setEitem(rs.getString(5));
+			   vo.setCate(rs.getString(6));
+			   vo.setHomepage(rs.getString(7));
+			   SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+			   vo.setS_date(dateFormat.format(rs.getDate(8)));
+	           vo.setE_date(dateFormat.format(rs.getDate(9)));
+			   vo.setLoc(rs.getString(10));
+			   vo.setLoc_detail(rs.getString(11));
+			   vo.setHost(rs.getString(12));
+			   vo.setPoster(rs.getString(13));
+			   vo.setElike(rs.getInt(14));
+			   vo.setJjim(rs.getInt(15));
+			   vo.setScore(rs.getDouble(16));
+			   vo.setPrice(rs.getInt(17));
+			   vo.setHit(rs.getInt(18));
+			   
+			   list.add(vo);
+		   }
+		   rs.close();
+	   }catch(Exception ex)
+	   {
+		  // 에러 출력 
+		   ex.printStackTrace();
+	   }
+	   finally
+	   {
+		   // 반환 => 재사용 
+		   dbconn.disConnection(conn, ps);
+	   }
+	   return list;
+   }
 
    
 }

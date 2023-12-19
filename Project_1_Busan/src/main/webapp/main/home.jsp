@@ -117,7 +117,7 @@
                         <p>
                         <br>
                         <h6 class="product-card-heading">${vo.ename }</h6>
-                        <div class="product-card-price">${vo.elike}</div>
+                        <div class="product-card-price">${vo.s_date}~${vo.e_date}</div>
                     </a>
                 </div>
                 </c:forEach>

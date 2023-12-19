@@ -1,7 +1,19 @@
 package com.sist.vo;
 
 public class ExVO {
-	private int eno,elike,hit;
+	private int eno,elike,hit,jjim,price;
+	public int getJjim() {
+		return jjim;
+	}
+	public void setJjim(int jjim) {
+		this.jjim = jjim;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
 	private String ename,eename,efield,eitem,cate,homepage,s_date,e_date,loc,loc_detail,host,poster;
 	private double score;
 	public int getEno() {

@@ -15,7 +15,7 @@
           <li><a href="../busan/tour.do">명소</a></li>
           <li><a href="../busan/food.do">맛집</a></li>
           <li><a href="../busan/festival.do">축제</a></li>
-          <li><a href="#">전시</a></li>
+          <li><a href="../busan/ex.do">전시</a></li>
           <li><a href="../busan/activity.do">체험</a></li>
         </ul>
       </li>
