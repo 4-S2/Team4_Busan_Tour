@@ -33,8 +33,8 @@
     </ul>
     
     <ul class="navbar-user">
-    	<li><a href="#">로그인</a></li>
-    	<li><a href="#">회원가입</a></li>
+    	<li><a href="../member/login.do">로그인</a></li>
+    	<li><a href="../member/join.do">회원가입</a></li>
     	<!-- <li><a href="#"><img class="icon-cart" src="../images/icon_cart.png"></a></li> -->
     </ul>
   </div>

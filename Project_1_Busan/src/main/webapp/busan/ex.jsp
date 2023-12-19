@@ -13,7 +13,7 @@
      <c:forEach var="vo" items="${list }">
        <div class="col-md-4">
 	    <div class="thumbnail">
-	      <a href="#">
+	      <a href="../busan/ex_detail.do">
 	        <img src="${vo.poster }" style="width:310px;height: 200px">
 	        <div class="caption">
 	          <p>${vo.ename }</p>

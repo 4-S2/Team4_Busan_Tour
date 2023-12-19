@@ -4,6 +4,7 @@
   <bean id="main" class="com.sist.model.MainModel"/>
   <bean id="busan" class="com.sist.model.BusanListModel"/>
   <bean id="ex" class="com.sist.model.ExListModel"/>
+  <bean id="model" class="com.sist.model.MemberModel"/>
   
    
 </beans>

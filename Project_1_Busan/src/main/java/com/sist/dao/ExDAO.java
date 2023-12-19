@@ -3,8 +3,6 @@ import java.util.*;
 import java.text.*;
 
 import com.sist.dbcp.CreateDBCPConnection;
-import com.sist.model.BusanListModel;
-import com.sist.vo.BusanListVO;
 import com.sist.vo.ExVO;
 
 import java.sql.*;
