@@ -5,6 +5,6 @@
   <bean id="busan" class="com.sist.model.BusanListModel"/>
   <bean id="ex" class="com.sist.model.ExListModel"/>
   <bean id="model" class="com.sist.model.MemberModel"/>
-  
+  <bean id="detail" class="com.sist.model.BusanDetailModel"/>
    
 </beans>

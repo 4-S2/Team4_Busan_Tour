@@ -13,8 +13,15 @@ public class BusanListVO {
 		   private int heart;
 		   private String deimage;
 		   private String rdate;
+		   private String rate;
 		
 		
+		public String getRate() {
+			return rate;
+		}
+		public void setRate(String rate) {
+			this.rate = rate;
+		}
 		public int getNo() {
 			return no;
 		}

@@ -196,7 +196,8 @@ public class BusanDAO {
 		   // 1. 연결 
 		   conn=dbconn.getConnection();
 		   // 2. SQL문장 전송 
-		   String sql="SELECT * FROM food WHERE no="+no;
+		   String sql="SELECT no,title,poster,hit,cont,menu,addr,phone,Restday,bhour,tag,jjim,heart,deimage,rdate "
+		   		+ "FROM food WHERE no="+no;
 		   // 3. 미리 전송 
 		   ps=conn.prepareStatement(sql);
 		   // 4. 실행후에 결과값을 받는다 
@@ -232,7 +233,63 @@ public class BusanDAO {
 	   }
 	   return list;
    }
-
+   //부산 디테일
+   public List<BusanListVO> BusanDetailData(int no,String tab)
+   {
+	   /*
+	    * private int no;
+		   private String title;
+		   private String poster;
+		   private int hit;
+		   private String cont;
+		   private String menu;
+		   private String addr;
+		   private String phone,restday,bhour,tag;
+		   private char jjim;
+		   private int heart;
+		   private String deimage;
+		   private String rdate;
+	    */
+	   List<BusanListVO> list=new ArrayList<>();
+	   try
+	   {
+		   // 1. 연결 
+		   conn=dbconn.getConnection();
+		   // 2. SQL문장 전송 
+		   String sql="SELECT no,title,poster,hit,cont,addr,phone,rate,bhour,jjim,heart,deimage "
+		   		+ "FROM "+tab+" WHERE no="+no;
+		   // 3. 미리 전송 
+		   ps=conn.prepareStatement(sql);
+		   // 4. 실행후에 결과값을 받는다 
+		   ResultSet rs=ps.executeQuery();
+		   rs.next();
+		   BusanListVO vo=new BusanListVO();
+		   vo.setNo(rs.getInt(1));
+	       vo.setTitle(rs.getString(2));
+		   vo.setPoster(rs.getString(3));
+		   vo.setHit(rs.getInt(4));
+		   vo.setCont(rs.getString(5));
+		   vo.setAddr(rs.getString(6));
+		   vo.setPhone(rs.getString(7));
+		   vo.setRate(rs.getString(8));
+		   vo.setBhour(rs.getString(9));
+		   vo.setJjim(rs.getString(10));
+		   vo.setHeart(rs.getInt(11));
+		   vo.setDeimage(rs.getString(12));
+		   list.add(vo);
+		   rs.close();
+	   }catch(Exception ex)
+	   {
+		  // 에러 출력 
+		   ex.printStackTrace();
+	   }
+	   finally
+	   {
+		   // 반환 => 재사용 
+		   dbconn.disConnection(conn, ps);
+	   }
+	   return list;
+   }
    
 }
 
