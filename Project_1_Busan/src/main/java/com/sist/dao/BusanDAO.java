@@ -233,30 +233,16 @@ public class BusanDAO {
 	   }
 	   return list;
    }
-   //부산 디테일
-   public List<BusanListVO> BusanDetailData(int no,String tab)
-   {
-	   /*
-	    * private int no;
-		   private String title;
-		   private String poster;
-		   private int hit;
-		   private String cont;
-		   private String menu;
-		   private String addr;
-		   private String phone,restday,bhour,tag;
-		   private char jjim;
-		   private int heart;
-		   private String deimage;
-		   private String rdate;
-	    */
+   //부산 상세보기
+   public List<BusanListVO> busanDetailData(int no,String tab)
+   {  
 	   List<BusanListVO> list=new ArrayList<>();
 	   try
 	   {
 		   // 1. 연결 
 		   conn=dbconn.getConnection();
 		   // 2. SQL문장 전송 
-		   String sql="SELECT no,title,poster,hit,cont,addr,phone,rate,bhour,jjim,heart,deimage "
+		   String sql="SELECT no,title,poster,hit,cont,addr,phone,rate,bhour,jjim,heart,deimage,tag "
 		   		+ "FROM "+tab+" WHERE no="+no;
 		   // 3. 미리 전송 
 		   ps=conn.prepareStatement(sql);
@@ -276,6 +262,7 @@ public class BusanDAO {
 		   vo.setJjim(rs.getString(10));
 		   vo.setHeart(rs.getInt(11));
 		   vo.setDeimage(rs.getString(12));
+		   vo.setTag(rs.getString(13));
 		   list.add(vo);
 		   rs.close();
 	   }catch(Exception ex)
