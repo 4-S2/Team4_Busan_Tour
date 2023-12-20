@@ -9,7 +9,7 @@ public class BusanListVO {
 		   private String menu;
 		   private String addr;
 		   private String phone,restday,bhour,tag;
-		   private char jjim;
+		   private String jjim;
 		   private int heart;
 		   private String deimage;
 		   private String rdate;
@@ -81,10 +81,10 @@ public class BusanListVO {
 		public void setTag(String tag) {
 			this.tag = tag;
 		}
-		public char getJjim() {
+		public String getJjim() {
 			return jjim;
 		}
-		public void setJjim(char jjim) {
+		public void setJjim(String jjim) {
 			this.jjim = jjim;
 		}
 		public int getHeart() {
