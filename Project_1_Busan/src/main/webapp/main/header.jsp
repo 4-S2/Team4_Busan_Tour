@@ -2,42 +2,40 @@
     pageEncoding="UTF-8"%>
     
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-  
-    <div class="navbar-header">
-      <a class="navbar-brand" href="../main/main.do">Busan Tour</a>
+	<div class="container-fluid">
+	
+	    <div class="navbar-header">
+	    	<a class="navbar-brand" href="../main/main.do">Busan Tour</a>
+	    </div>
+	    
+	    <ul class="nav navbar-nav">
+	        <li class="dropdown">
+	            <a class="dropdown-toggle" data-toggle="dropdown" href="#">부산 여행<span class="caret"></span></a>
+	            <ul class="dropdown-menu">
+		            <li><a href="#">명소</a></li>
+		            <li><a href="#">맛집</a></li>
+		            <li><a href="#">축제</a></li>
+		            <li><a href="#">체험</a></li>
+	            </ul>
+	        </li>
+	        
+	        <li><a href="#">특산물 쇼핑</a></li>
+	        
+	        <li class="dropdown">
+	            <a class="dropdown-toggle" data-toggle="dropdown" href="#">커뮤니티<span class="caret"></span></a>
+	            <ul class="dropdown-menu">
+		            <li><a href="#">공지사항</a></li>
+		            <li><a href="#">묻고 답하기</a></li>
+	            </ul>
+	        </li>
+	    </ul>
+	    
+	    <ul class="navbar-user" style="float: right;">
+	        <li style="display: inline-block;"><a href="#" style="padding: 0 15px; line-height: 50px;">로그인</a></li>
+	        <li style="display: inline-block;"><a href="#" style="padding: 0 15px; line-height: 50px;">회원가입</a></li>
+	        <li style="display: inline-block;"><a href="#"><img class="icon-cart" src="../images/icon_cart.png"></a></li>
+        </ul>
     </div>
-    
-    <ul class="nav navbar-nav">
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">부산 여행<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="../busan/tour.do">명소</a></li>
-          <li><a href="../busan/food.do">맛집</a></li>
-          <li><a href="../busan/festival.do">축제</a></li>
-          <li><a href="../busan/ex.do">전시</a></li>
-          <li><a href="../busan/activity.do">체험</a></li>
-        </ul>
-      </li>
-      
-      <li><a href="#">특산물 쇼핑</a></li>
-      
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">커뮤니티<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">공지사항</a></li>
-          <li><a href="#">묻고 답하기</a></li>
-        </ul>
-      </li>
-
-    </ul>
-    
-    <ul class="navbar-user">
-    	<li><a href="../member/login.do">로그인</a></li>
-    	<li><a href="../member/join.do">회원가입</a></li>
-    	<!-- <li><a href="#"><img class="icon-cart" src="../images/icon_cart.png"></a></li> -->
-    </ul>
-  </div>
 </nav>
 
 <%-- <%@ page language="java" contentType="text/html; charset=UTF-8"

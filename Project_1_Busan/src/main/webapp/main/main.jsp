@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
 <!DOCTYPE html>
 <html data-wf-page="5badda2935e11305319a461d" data-wf-site="5badda2935e11303a89a461e">
     <head>
@@ -9,9 +6,19 @@
         <title>Busan Tour</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <style type="text/stylesheet">
+            .nav-bar .navbar-user{
+                float: right;
+                list-style: none;
+            }
+            .nav-bar .navbar-user li{
+                display: inline-block;
+                color: #9d9d9d;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             !function(o, c) {
                 var n = c.documentElement
@@ -20,8 +27,9 @@
                 ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
             }(window, document);
         </script>
-
-		<script type="text/javascript">
+        <!-- <link href="https://assets.website-files.com/5badda2935e11303a89a461e/5bd83035e7345f2f22c0bece_favicon.png" rel="shortcut icon" type="image/x-icon"/>
+        <link href="https://assets.website-files.com/5badda2935e11303a89a461e/5bd8303816e1ea6c375be6cb_webclip.png" rel="apple-touch-icon"/> -->
+        <script type="text/javascript">
             window.__WEBFLOW_CURRENCY_SETTINGS = {
                 "currencyCode": "USD",
                 "$init": true,
@@ -33,29 +41,26 @@
                 "hideDecimalForWholeNumbers": false
             };
         </script>
-        <!-- <link href="https://assets.website-files.com/5badda2935e11303a89a461e/5bd83035e7345f2f22c0bece_favicon.png" rel="shortcut icon" type="image/x-icon"/>
-        <link href="https://assets.website-files.com/5badda2935e11303a89a461e/5bd8303816e1ea6c375be6cb_webclip.png" rel="apple-touch-icon"/> -->
     </head>
-    
-    <body>    
-        <div id="main" class="page-wrapper">
-        	<!-- header -->
-            <jsp:include page="header.jsp"></jsp:include>
-
-            <!-- home -->
+    <body>
+    	<!-- header -->
+        <jsp:include page="header.jsp"></jsp:include>
+        
+        <div class="page-wrapper">
+			<!-- home -->
 			<jsp:include page="${main_jsp }"></jsp:include>
-
-			<!-- footer -->
-			<jsp:include page="footer.jsp"></jsp:include>
         </div>
         
+        <!-- footer -->
+		<jsp:include page="footer.jsp"></jsp:include>
+		
         <!-- <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5badda2935e11303a89a461e" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
         <script src="https://assets.website-files.com/5badda2935e11303a89a461e/js/webflow.9828d3d6a.js" type="text/javascript"></script>
 
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            /* $(document).ready(function () { */
+            $(document).ready(function () {
                 var tourSlide = new Swiper(".tourSlide", {
                     spaceBetween: 0,
                     centeredSlides: true,
@@ -73,7 +78,7 @@
                         prevEl: ".swiper-button-prev",
                     },
                 });
-            /* }); */
+            });
 
             // $(document).ready(function () {
             //     var shopSlide = new Swiper(".shopSlide", {
