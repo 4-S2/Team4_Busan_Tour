@@ -14,7 +14,7 @@
 	            <ul class="dropdown-menu">
 		            <li><a href="#">명소</a></li>
 		            <li><a href="#">맛집</a></li>
-		            <li><a href="#">축제</a></li>
+		            <li><a href="../busan/festival.do">축제</a></li>
 		            <li><a href="#">체험</a></li>
 	            </ul>
 	        </li>
