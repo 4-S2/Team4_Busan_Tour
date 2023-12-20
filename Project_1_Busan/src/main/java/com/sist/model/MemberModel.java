@@ -12,4 +12,11 @@ public class MemberModel {
 	  request.setAttribute("main_jsp", "../member/join.jsp");
 	  return "../main/main.jsp";
   }
+  
+  @RequestMapping("member/login.do")
+  public String member_login(HttpServletRequest request,HttpServletResponse response)
+  {
+	  request.setAttribute("main_jsp", "../member/login.jsp");
+	  return "../main/main.jsp";
+  }
 }
