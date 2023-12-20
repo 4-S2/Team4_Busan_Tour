@@ -7,26 +7,10 @@
     <head>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<<<<<<< HEAD
-        <meta content="Webflow" name="generator"/>
-        <link href="../css/style.css" rel="stylesheet" type="text/css"/> 
-        <!-- <link href="https://assets.website-files.com/5badda2935e11303a89a461e/css/toystore-template.webflow.f565c55c5.css" rel="stylesheet" type="text/css"/> -->
-        <link href="https://fonts.googleapis.com" rel="preconnect"/>
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            WebFont.load({
-                google: {
-                    families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Varela Round:400"]
-                }
-            });
-        </script>
-=======
         <title>Busan Tour</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link href="../css/style.css" rel="stylesheet" type="text/css"/> 
->>>>>>> branch 'master' of https://github.com/4-S2/Team4_Busan_Tour.git
         <script type="text/javascript">
             !function(o, c) {
                 var n = c.documentElement
