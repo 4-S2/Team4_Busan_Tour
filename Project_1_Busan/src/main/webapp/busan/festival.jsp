@@ -13,7 +13,7 @@
         <meta content="ToyStore — Webflow Ecommerce HTML website template" property="twitter:title"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta content="Webflow" name="generator"/>
-        <link href="../css/style2.css" rel="stylesheet" type="text/css"/> 
+        <link href="../css/style.css" rel="stylesheet" type="text/css"/> 
         <!-- <link href="https://assets.website-files.com/5badda2935e11303a89a461e/css/toystore-template.webflow.f565c55c5.css" rel="stylesheet" type="text/css"/> -->
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
