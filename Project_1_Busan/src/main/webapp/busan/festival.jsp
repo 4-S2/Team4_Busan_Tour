@@ -19,7 +19,7 @@
                 ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
             }(window, document);
         </script>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             window.__WEBFLOW_CURRENCY_SETTINGS = {
@@ -39,8 +39,8 @@
     
     <body>
         <div class="page-wrapper">
-        	<!-- 경로 -->
-            <div class="section no-padding-vertical">
+            <!-- 경로 -->
+            <!-- <div class="section no-padding-vertical">
                 <div class="wrapper side-paddings">
                     <div class="breadcrumbs">
                         <a href="/" class="link-grey">Home</a>
@@ -48,7 +48,8 @@
                         <div>Catalog</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
             <div class="section">
                 <div class="wrapper">
                     <div class="shop-header">
@@ -74,41 +75,42 @@
 					<!-- list -->
                     <div class="full-width w-dyn-list">
                         <div role="list" class="products w-dyn-items">
-	                        <c:forEach var="vo" items="${list}">
-	                        <div role="listitem" class="product-card-wrapper w-dyn-item">
-	                            <a href="/product/teddy-bear" class="product-card w-inline-block">
-	                                <div class="product-card-image-wrapper">
-	                                    <img src="${vo.poster}" alt="" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
-	                                </div>
-	                                <h6 class="product-card-heading">${vo.title}</h6>
-	                                <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div>
-	                            </a>
-	                        </div>
-	                        </c:forEach>
+                            <c:forEach var="vo" items="${list}">
+                            <div role="listitem" class="product-card-wrapper w-dyn-item">
+                                <a href="#" class="product-card w-inline-block">
+                                    <div class="product-card-image-wrapper">
+                                        <img src="${vo.poster}" alt="" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
+                                    </div>
+                                    <h6 class="product-card-heading">${vo.title}</h6>
+                                    <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div>
+                                </a>
+                            </div>
+                            </c:forEach>
                         </div>
                     </div>
                 </div>
             </div>
-		  <div class="row">
-		    <div class="text-center">
-		       <ul class="pagination">
-		          <%--
-		             <!ENTITY lt "<">
-		             <!ENTITY gt ">">
-		             => &lt;
-		           --%>
-		          <c:if test="${startPage>1 }">
-				   <li><a href="festival.do?page=${startPage-1}">&lt;</a></li>
-				  </c:if>
-				  <c:forEach var="i" begin="${startPage }" end="${endPage }">
-				   <li ${curpage==i?"class=active":"" }><a href="festival.do?page=${i}">${i }</a></li>
-				  </c:forEach>
-				  <c:if test="${endPage<totalpage }">
-				   <li><a href="festival.do?page=${endPage+1}">&gt;</a></li>
-				  </c:if>
-				</ul>
-		    </div>
-		  </div>
+            
+            <div class="row">
+                <div class="text-center">
+                    <ul class="pagination">
+                        <%--
+                            <!ENTITY lt "<">
+                            <!ENTITY gt ">">
+                            => &lt;
+                        --%>
+                        <c:if test="${startPage>1}">
+                            <li><a href="festival.do?page=${startPage-1}">&lt;</a></li>
+                        </c:if>
+                        <c:forEach var="i" begin="${startPage}" end="${endPage}">
+                            <li ${curpage==i?"class=active":""}><a href="festival.do?page=${i}">${i}</a></li>
+                        </c:forEach>
+                        <c:if test="${endPage<totalpage}">
+                            <li><a href="festival.do?page=${endPage+1}">&gt;</a></li>
+                        </c:if>
+                    </ul>
+                </div>
+            </div>
         </div>
         <!-- <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5badda2935e11303a89a461e" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
         <script src="https://assets.website-files.com/5badda2935e11303a89a461e/js/webflow.9828d3d6a.js" type="text/javascript"></script>
