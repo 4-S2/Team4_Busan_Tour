@@ -16,6 +16,7 @@
 		            <li><a href="../busan/food.do">맛집</a></li>
 		            <li><a href="../busan/festival.do">축제</a></li>
 		            <li><a href="#">체험</a></li>
+		            <li><a href="../busan/ex.do">전시</a></li>
 	            </ul>
 	        </li>
 	        
@@ -31,8 +32,8 @@
 	    </ul>
 	    
 	    <ul class="navbar-user" style="float: right;">
-	        <li style="display: inline-block;"><a href="#" style="padding: 0 15px; line-height: 50px;">로그인</a></li>
-	        <li style="display: inline-block;"><a href="#" style="padding: 0 15px; line-height: 50px;">회원가입</a></li>
+	        <li style="display: inline-block;"><a href="../member/login.do" style="padding: 0 15px; line-height: 50px;">로그인</a></li>
+	        <li style="display: inline-block;"><a href="../member/join.do" style="padding: 0 15px; line-height: 50px;">회원가입</a></li>
 	        <li style="display: inline-block;"><a href="#"><img class="icon-cart" src="../images/icon_cart.png"></a></li>
         </ul>
     </div>

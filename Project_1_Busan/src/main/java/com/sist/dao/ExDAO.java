@@ -28,10 +28,10 @@ public class ExDAO {
 		   // 1. 연결 
 		   conn=dbconn.getConnection();
 		   // 2. SQL문장 전송 
-		   String sql="SELECT eno,ename,poster,num "
-				     +"FROM (SELECT eno,ename,poster,rownum as num "
-				     +"FROM (SELECT eno,ename,poster "
-				     +"FROM exhibition ORDER BY eno ASC)) "
+		   String sql="SELECT eno, ename, poster, TO_CHAR(s_date, 'YYYY-MM-DD') AS s_date, TO_CHAR(e_date, 'YYYY-MM-DD') AS e_date "
+				     +"FROM (SELECT eno, ename, poster, s_date, e_date , rownum as num "
+				     +"FROM (SELECT eno, ename, poster, s_date, e_date "
+				     +"FROM exhibition ORDER BY eno DESC)) "
 				     +"WHERE num BETWEEN ? AND ?";
 		   // 3. 미리 전송 
 		   ps=conn.prepareStatement(sql);
@@ -51,6 +51,10 @@ public class ExDAO {
 			   vo.setEno(rs.getInt(1));
 			   vo.setEname(rs.getString(2));
 			   vo.setPoster(rs.getString(3));
+			   SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+	            vo.setS_date(dateFormat.format(rs.getDate(4)));
+		        vo.setE_date(dateFormat.format(rs.getDate(5)));
+			   
 			   list.add(vo);
 		   }
 		   rs.close();

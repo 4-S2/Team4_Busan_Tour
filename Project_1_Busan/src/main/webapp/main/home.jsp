@@ -169,7 +169,7 @@
     <div class="wrapper">
         <div class="shop-header">
             <h3 class="no-margin">추천 전시</h3>
-            <a href="/catalog" class="link arrow-link">전체보기</a>
+            <a href="../busan/ex.do" class="link arrow-link">전체보기</a>
             <div class="shop-header-line">
                 <div class="shop-header-color"></div>
             </div>
@@ -185,7 +185,7 @@
                         <p>
                         <br>
                         <h6 class="product-card-heading">${vo.ename}</h6>
-                        <div class="product-card-price">${vo.elike}</div>
+                        <div class="product-card-price">${vo.s_date}~${vo.e_date }</div>
                     </a>
                 </div>
                 </c:forEach>
