@@ -7,13 +7,13 @@
 <!-- Last Published: Thu Feb 11 2021 05:20:01 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="toystore-template.webflow.io" data-wf-page="5baf791a7a16ad127cda1ebc" data-wf-site="5badda2935e11303a89a461e">
     <head>
-        <meta charset="utf-8"/>
+        <!-- <meta charset="utf-8"/>
         <title>ToyStore — Webflow Ecommerce HTML website template</title>
         <meta content="ToyStore — Webflow Ecommerce HTML website template" property="og:title"/>
         <meta content="ToyStore — Webflow Ecommerce HTML website template" property="twitter:title"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="Webflow" name="generator"/>
-        <link href="https://assets.website-files.com/5badda2935e11303a89a461e/css/toystore-template.webflow.f565c55c5.css" rel="stylesheet" type="text/css"/>
+        <meta content="Webflow" name="generator"/> -->
+        <link href="../css/style.css" rel="stylesheet" type="text/css"/>
         <link href="https://fonts.googleapis.com" rel="preconnect"/>
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -49,7 +49,7 @@
     </head>
     
     <body>
-        <div class="preloader">
+        <%--<div class="preloader">
             <div class="loading-icon">
                 <img src="https://assets.website-files.com/5badda2935e11303a89a461e/5bc1931d898dce4c7abcd74f_preloader.gif" alt="" class="preloader-icon"/>
             </div>
@@ -337,7 +337,45 @@
                         <div>Catalog</div>
                     </div>
                 </div>
+            </div>--%>
+            <!-- <div class="section no-padding-vertical">
+                <div class="wrapper side-paddings">
+                    <div data-w-id="e89551e9-b5ae-51a6-c418-02c90497790c" class="subscribe">
+                        <div class="subscribe-info">
+                            <h4>
+                                Subscribe to our newsletter<br/>
+                                &amp;get <span class="text-green">10% discount!</span>
+                            </h4>
+                        </div>
+                        <div class="subscribe-form-wrapper w-form">
+                            <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form" method="get" class="subscribe-form" data-wf-page-id="5baf791a7a16ad127cda1ebc" data-wf-element-id="e89551e9-b5ae-51a6-c418-02c904977917">
+                                <input type="email" class="input subscribe-input w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email address" id="email-2" required=""/>
+                                <input type="submit" value="Subscribe" data-wait="Please wait..." class="button w-button"/>
+                            </form>
+                            <div class="form-success w-form-done">
+                                <div>Thank you! Your submission has been received!</div>
+                            </div>
+                            <div class="form-error w-form-fail">
+                                <div>Oops! Something went wrong while submitting the form.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div style="margin-top:10px">
+                <div class="">
+                    <div class="search">
+                        <div class="">
+                            <form id="" name="Search-Form" data-name="Subscribe Form" method="get" class="subscribe-form">
+                                <input type="text" class="input subscribe-input w-input" name="email-2" data-name="Email 2" placeholder="검색어를 입력하세요" 
+                                id="" required style="width:500px"/>
+                                <input type="submit" value="Search" class="button w-button"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
             <div class="section">
                 <div class="wrapper">
                     <div class="shop-header">
@@ -509,7 +547,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section no-padding-vertical">
+            <!-- <div class="section no-padding-vertical">
                 <div class="wrapper side-paddings">
                     <div data-w-id="e89551e9-b5ae-51a6-c418-02c90497790c" class="subscribe">
                         <div class="subscribe-info">
@@ -535,8 +573,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="section">
+            </div> -->
+            <!-- <div class="section">
                 <div class="wrapper">
                     <div class="intro">
                         <div class="title">@ElasticThemes</div>
@@ -564,7 +602,8 @@
                     </div>
                     <a href="https://instagram.com" target="_blank" class="button w-button">See More Photos</a>
                 </div>
-            </div>
+            </div> -->
+            
             <div class="section color no-padding-vertical">
                 <div class="wrapper text-white">
                     <div class="footer">

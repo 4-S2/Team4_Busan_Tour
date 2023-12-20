@@ -40,6 +40,37 @@ public class BusanListModel {
 		  request.setAttribute("main_jsp", "../busan/festival.jsp");
 		  return "../main/main.jsp";
 	}
+	@RequestMapping("busan/food.do")
+	public String busan_foodList(HttpServletRequest request,
+			  HttpServletResponse response)
+	{
+		  // DB연동 
+		  //1. 요청값 받기
+		  String page=request.getParameter("page");
+		  if(page==null)
+			  page="1";
+		  int curpage=Integer.parseInt(page);
+		  //2. DB연동 
+		  BusanDAO dao=new BusanDAO();
+		  List<BusanListVO> list=dao.BusanListData(curpage,"food");
+		  int totalpage=dao.BusanListTotalPage("food");
+		  
+		   final int BLOCK=5;
+		   int startPage=((curpage-1)/BLOCK*BLOCK)+1;
+		   int endPage=((curpage-1)/BLOCK*BLOCK)+BLOCK;
+		   
+		   if(endPage>totalpage)
+			   endPage=totalpage;
+		  
+		  request.setAttribute("curpage", curpage);
+		  request.setAttribute("totalpage", totalpage);
+		   request.setAttribute("startPage", startPage);
+		   request.setAttribute("endPage", endPage);
+		  request.setAttribute("list", list);
+		  //3. 결과값 모아서 request에 저장 
+		  request.setAttribute("main_jsp", "../busan/food.jsp");
+		  return "../main/main.jsp";
+	}
 	
 	
 }
