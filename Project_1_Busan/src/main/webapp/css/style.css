@@ -3417,7 +3417,7 @@ td,th{padding:0}
      -webkit-flex: 1;
      -ms-flex: 1;
      flex: 1;
-     border-radius: 16px;
+     border-radius: 15px;
      background-color: #fff;
      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
      -webkit-transition: box-shadow 300ms ease, -webkit-transform 300ms ease;
@@ -4882,6 +4882,21 @@ a{
 	width: 32%;
 }
 
+#shop .shopSlide .swiper-wrapper{
+	flex-direction: column;
+}
+#shop .shopSlide .swiper-slide{
+	width: 100%;
+	border: 1px solid #eee;
+	border-radius: 15px;
+}
+
+#festival_activity .swiper{
+	width: 100%;
+	border: 1px solid #eee;
+	border-radius: 15px;
+}
+
 #bottom{
   width: 100%;
 }
@@ -4898,14 +4913,38 @@ a{
 #bottom .con-box{
   width: 33.333%;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+}
+#bottom .con-box .shop-header{
+	margin-bottom: 10px;
+}
+
+#bottom .con-box .shop-header-line{
+	margin-top: 0;
+}
+
+#bottom .con-box .link{
+	margin-top: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: none;
+    background-position: initial;
+    background-size: initial;
+    background-repeat: no-repeat;
+    border-bottom: none;
+    -webkit-transition: border-color 300ms ease;
+    transition: border-color 300ms ease;
+    color: #9d9d9d;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: normal;
 }
 #bottom .con-box ul{
   padding-left: 0;
 }
-
 #bottom .con-box ul li{
   padding: 5px;
   border-bottom: 1px solid #ddd;
@@ -4918,6 +4957,10 @@ a{
 
 #bottom .con-box ul li:last-child{
   border-bottom: none;
+}
+
+.shop-header-color{
+	background-color: #a7cdcd;
 }
 
 

@@ -82,19 +82,53 @@
                         prevEl: ".swiper-button-prev",
                     },
                 });
+                
+                var festivalSlide = new Swiper(".festivalSlide", {
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    loop: true,
+                    pagination: {
+                        el: ".festivalSlide .swiper-pagination",
+                        clickable: true,
+                    },
+                    /* navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    }, */
+                });
+                
+                var activitySlide = new Swiper(".activitySlide", {
+                    spaceBetween: 0,
+                    centeredSlides: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    loop: true,
+                    pagination: {
+                        el: ".activitySlide .swiper-pagination",
+                        clickable: true,
+                    },
+                    /* navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    }, */
+                });
             });
 
-            // $(document).ready(function () {
-            //     var shopSlide = new Swiper(".shopSlide", {
-            //         direction: "vertical",
-            //         spaceBetween: 10,
-            //         autoplay: {
-            //             delay: 2500,
-            //             disableOnInteraction: false,
-            //         },
-            //         loop: true,
-            //     });
-            // });
+            /* var shopSlide = new Swiper(".shopSlide", {
+                direction: "vertical",
+                spaceBetween: 10,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+            }); */
         </script>
     </body>
 </html>

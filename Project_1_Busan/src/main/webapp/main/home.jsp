@@ -63,16 +63,25 @@
         <div class="swiper shopSlide">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <h2>특산물1</h2>
-                    <p>특산물</p>
+                    <img src="">
+                	<div class="text">
+                		<h5>추천 특산물1</h5>
+                   		<p>추천 특산물1</p>
+                	</div>
                 </div>
                 <div class="swiper-slide">
-                    <h2>특산물2</h2>
-                    <p>특산물</p>
+                    <img src="">
+                	<div class="text">
+                		<h5>추천 특산물2</h5>
+                   		<p>추천 특산물2</p>
+                	</div>
                 </div>
                 <div class="swiper-slide">
-                    <h2>특산물3</h2>
-                    <p>특산물</p>
+                    <img src="">
+                	<div class="text">
+                		<h5>추천 특산물3</h5>
+                   		<p>추천 특산물3</p>
+                	</div>
                 </div>
             </div>
             <!-- <div class="swiper-button-next"></div>
@@ -84,19 +93,74 @@
 
 <div id="Scroll-Section" class="section no-padding-top">
     <div class="wrapper">
-        <div class="home-categories">
-            <div data-w-id="79f09a57-05ab-ed81-c059-4d50244b2341" style="opacity:0" class="home-category-card">
+        <div id="festival_activity" class="home-categories">
+<!--             <div data-w-id="79f09a57-05ab-ed81-c059-4d50244b2341" style="opacity:0" class="home-category-card">
                 <div class="home-category-info-1">
-                    <h3>추천 축제</h3>
                     <a href="/catalog" class="button small white w-button">Button</a>
                 </div>
-            </div>
-            <div data-w-id="b498480a-a03d-afff-8227-912980ab2a0a" style="opacity:0" class="home-category-card red">
+            </div> -->
+            <div class="swiper festivalSlide">
+	            <div class="swiper-wrapper">
+	                <div class="swiper-slide">
+	                	<img src="">
+	                	<div class="text">
+	                		<h3>추천 축제1</h3>
+                    		<p>추천 축제1</p>
+	                	</div>
+	                </div>
+	                <div class="swiper-slide">
+	                	<img src="">
+	                	<div class="text">
+	                		<h3>추천 축제2</h3>
+                    		<p>추천 축제2</p>
+	                	</div>
+	                </div>
+	                <div class="swiper-slide">
+	                	<img src="">
+	                	<div class="text">
+	                		<h3>추천 축제3</h3>
+                    		<p>추천 축제3</p>
+	                	</div>
+	                </div>
+	            </div>
+	            <!-- <div class="swiper-button-next"></div>
+	            <div class="swiper-button-prev"></div>
+	            <div class="shop swiper-pagination"></div> -->
+	        </div>
+
+            <!-- <div data-w-id="b498480a-a03d-afff-8227-912980ab2a0a" style="opacity:0" class="home-category-card red">
                 <div class="home-category-info-2">
-                    <h3>추천 체험</h3>
                     <a href="/catalog" class="button small white w-button">Button</a>
                 </div>
-            </div>
+            </div> -->
+            <div class="swiper activitySlide">
+	            <div class="swiper-wrapper">
+	                <div class="swiper-slide">
+	                    <img src="">
+	                	<div class="text">
+	                		<h3>추천 체험1</h3>
+                    		<p>추천 체험1</p>
+	                	</div>
+	                </div>
+	                <div class="swiper-slide">
+	                    <img src="">
+	                	<div class="text">
+	                		<h3>추천 체험2</h3>
+                    		<p>추천 체험2</p>
+	                	</div>
+	                </div>
+	                <div class="swiper-slide">
+	                    <img src="">
+	                	<div class="text">
+	                		<h3>추천 체험3</h3>
+                    		<p>추천 체험3</p>
+	                	</div>
+	                </div>
+	            </div>
+	            <!-- <div class="swiper-button-next"></div>
+	            <div class="swiper-button-prev"></div>
+	            <div class="shop swiper-pagination"></div> -->
+	        </div>
         </div>
     </div>
 </div>
@@ -136,7 +200,7 @@
         <div class="notice con-box">
             <div class="shop-header">
                 <h4>공지사항</h4>
-                <a href="#" class="link arrow-link">전체보기</a>
+                <a href="#" class="link arrow-link">+</a>
                 <div class="shop-header-line">
                     <div class="shop-header-color"></div>
                 </div>
@@ -150,7 +214,7 @@
         <div class="inquiry con-box">
             <div class="shop-header">
                 <h4>묻고 답하기</h4>
-                <a href="#" class="link arrow-link">전체보기</a>
+                <a href="#" class="link arrow-link">+</a>
                 <div class="shop-header-line">
                     <div class="shop-header-color"></div>
                 </div>
