@@ -31,6 +31,7 @@ public class MainModel {
         ExDAO exTopDao = ExDAO.newInstance();
         
         NoticeDAO ndao = NoticeDAO.newInstance();
+        QnaBoardDAO qdao = QnaBoardDAO.newInstance();
 		
 		 // 인기 맛집 Top 3 
 		 List<BusanListVO> fdtoplist = topdao.findTop3("food");
@@ -42,6 +43,10 @@ public class MainModel {
 		 // 공지사항 1-4번
 		 List<NoticeVO> nlist = ndao.noticefind4();
 		 request.setAttribute("nlist", nlist);
+		 
+		 // 묻고 답하기 1-4번
+		 List<QnaBoardVO> qlist = qdao.Qnafind4();
+		 request.setAttribute("qlist", qlist);
 		 
 		/*
 		 * // 인기 명소 Top 6 List<BusanListVO> ttoplist = topdao.findTop6("tour");

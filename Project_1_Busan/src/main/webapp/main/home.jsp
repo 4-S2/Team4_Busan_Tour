@@ -162,10 +162,9 @@
                 </div>
             </div>
             <ul>
-                <li>공지사항1공지사항1공지사항1공지사항1공지사항1공지사항1공지사항1공지사항1공지사항1공지사항1</li>
-                <li>공지사항2</li>
-                <li>공지사항3</li>
-                <li>공지사항4</li>
+            	<c:forEach var="vo" items="${nlist}">
+                	<li>${vo.ntitle }</li>
+                </c:forEach>
             </ul>
         </div>
         <div class="inquiry con-box">
@@ -177,10 +176,9 @@
                 </div>
             </div>
             <ul>
-                <li>묻고 답하기1</li>
-                <li>묻고 답하기2</li>
-                <li>묻고 답하기3</li>
-                <li>묻고 답하기4</li>
+            	<c:forEach var="vo" items="${qlist}">
+                	<li>${vo.subject }</li>
+                </c:forEach>
             </ul>
         </div>
         <div class="service con-box">
