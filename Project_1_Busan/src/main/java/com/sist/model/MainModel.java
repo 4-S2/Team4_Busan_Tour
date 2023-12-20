@@ -29,18 +29,20 @@ public class MainModel {
 		
 		BusanDAO topdao = BusanDAO.newInstance();
         ExDAO exTopDao = ExDAO.newInstance();
+        
+        NoticeDAO ndao = NoticeDAO.newInstance();
 		
 		 // 인기 맛집 Top 3 
 		 List<BusanListVO> fdtoplist = topdao.findTop3("food");
 		 request.setAttribute("fdtoplist", fdtoplist);
 		 
-		// 인기 명소 Top 6 
-		 List<BusanListVO> ttoplist = topdao.findTop3("tour");
-		 request.setAttribute("tTopList", ttoplist);
-		 
 		 List<ExVO> exToplist = exTopDao.mainpage_exData();
 		 request.setAttribute("exToplist", exToplist);
-		
+		 
+		 // 공지사항 1-4번
+		 List<NoticeVO> nlist = ndao.noticefind4();
+		 request.setAttribute("nlist", nlist);
+		 
 		/*
 		 * // 인기 명소 Top 6 List<BusanListVO> ttoplist = topdao.findTop6("tour");
 		 * request.setAttribute("ttoplist", ttoplist);
