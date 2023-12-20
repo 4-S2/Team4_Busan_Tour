@@ -2929,6 +2929,7 @@ td,th{padding:0}
      -webkit-flex-wrap: wrap;
      -ms-flex-wrap: wrap;
      flex-wrap: wrap;
+     justify-content: space-between;
    }
    
    .footer-nav {
@@ -4825,7 +4826,6 @@ a{
   color: #2b75d5;
   font-weight: bold;
  }
- 
  .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover{
   color: #2b75d5;
  }
@@ -4835,10 +4835,9 @@ a{
  .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
   background-color: #2b75d5;
  }
-
 .navbar .icon-cart{
-	max-width: 24px;
-	filter: invert(18%) sepia(76%) saturate(3460%) hue-rotate(197deg) brightness(99%) contrast(101%);
+  max-width: 24px;
+  filter: invert(18%) sepia(76%) saturate(3460%) hue-rotate(197deg) brightness(99%) contrast(101%);
 }
 
  #mainVisual{
@@ -4860,13 +4859,13 @@ a{
   color: #fff;
 }
 #mainVisual .tourSlide .slide1{
-  background-image: url("../images/main_tour1.jpg");
+  background-image: url("../images/visual1.jpg");
 }
 #mainVisual .tourSlide .slide2{
-  background-image: url("../images/main_tour2.jpg");
+  background-image: url("../images/visual2.png");
 }
 #mainVisual .tourSlide .slide3{
-  background-image: url("../images/main_tour3.png");
+  background-image: url("../images/visual3.jpg");
 }
 
 #foodShop{
@@ -4875,8 +4874,12 @@ a{
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: start;
+  gap: 40px;
   width: 1200px;
   margin: 0 auto;
+}
+#food .product-card-wrapper{
+	width: 32%;
 }
 
 #bottom{

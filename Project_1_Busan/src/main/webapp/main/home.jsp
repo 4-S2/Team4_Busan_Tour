@@ -36,15 +36,6 @@
             </div>
             <div class="full-width w-dyn-list">
                 <div role="list" class="products w-dyn-items">
-                    <div data-w-id="86c7c915-bcbe-c30c-93c0-5bed50ef155d" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
-                        <a href="/product/teddy-bear" class="product-card w-inline-block">
-                            <div class="product-card-image-wrapper">
-                                <img alt="" src="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min.png" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" sizes="100vw" srcset="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min-p-500.png 500w, https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min.png 1200w"/>
-                            </div>
-                            <h6 class="product-card-heading">Teddy Bear</h6>
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div>
-                        </a>
-                    </div>
                     <c:forEach var="vo" items="${fdtoplist}" varStatus="f">
                     <div data-w-id="86c7c915-bcbe-c30c-93c0-5bed50ef155d" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
                         <a href="#" class="product-card w-inline-block">
@@ -121,17 +112,6 @@
         </div>
         <div class="full-width w-dyn-list">
             <div role="list" class="products w-dyn-items">
-
-                <div data-w-id="a677a252-157c-7121-064d-fe101c861b40" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
-                    <a href="/product/happy-flower" class="product-card w-inline-block">
-                        <div class="product-card-image-wrapper">
-                            <img alt="" src="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5baf529c7a16ad5b5fd9fdf3_33727-9-wooden-toy-transparent-image-min.png" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" sizes="100vw" srcset="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5baf529c7a16ad5b5fd9fdf3_33727-9-wooden-toy-transparent-image-min-p-500.png 500w, https://assets.website-files.com/5baddb6a35e113da0e9a4802/5baf529c7a16ad5b5fd9fdf3_33727-9-wooden-toy-transparent-image-min.png 1200w"/>
-                        </div>
-                        <h6 class="product-card-heading">Happy Flower</h6>
-                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 38.00 USD</div>
-                    </a>
-                </div>
-
                 <c:forEach var="vo" items="${exToplist}">
                 <div data-w-id="a677a252-157c-7121-064d-fe101c861b40" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
                     <a href="#" class="product-card w-inline-block">
