@@ -66,7 +66,14 @@
          .subscribe-form{
          margin-top: 130px;
          }
-         .button{
+         .search .button{
+         background-color: #2b75d5;
+         }
+         .list h6{
+         margin-top: 20px;
+         font-size: 16px;
+         }
+         .product-card-price{
          background-color: #2b75d5;
          }
         </style>
@@ -145,7 +152,7 @@
             </div>
             
             
-            <div class="section food">
+            <div class="section list">
                 <div class="wrapper">
                     <div class="shop-header">
                         <h3 class="no-margin w-hidden-small w-hidden-tiny">맛집</h3>
@@ -168,7 +175,7 @@
                     </div>
 
 					<!-- list -->
-                    <div class="full-width w-dyn-list">
+                    <div class="full-width w-dyn-list list2">
                         <div role="list" class="products w-dyn-items">
                             <c:forEach var="vo" items="${list}">
                             <div role="listitem" class="product-card-wrapper w-dyn-item">
