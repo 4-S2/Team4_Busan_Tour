@@ -20,7 +20,7 @@
 		            </ul>
 	        </li>
 	        
-	        <li><a href="#">특산물 쇼핑</a></li>
+	        <li><a href="../busan/goods.do">특산물 쇼핑</a></li>
 	        
 	        <li class="dropdown">
 	            <a class="dropdown-toggle" data-toggle="dropdown" href="#">커뮤니티<span class="caret"></span></a>

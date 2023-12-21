@@ -145,7 +145,7 @@
             </div>
             
             
-            <div class="section">
+            <div class="section food">
                 <div class="wrapper">
                     <div class="shop-header">
                         <h3 class="no-margin w-hidden-small w-hidden-tiny">맛집</h3>

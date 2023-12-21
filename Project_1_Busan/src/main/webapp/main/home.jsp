@@ -29,7 +29,7 @@
         <div class="wrapper">
             <div class="shop-header">
                 <h3 class="no-margin">추천 맛집</h3>
-                <a href="#" class="link arrow-link">전체보기</a>
+                <a href="../busan/food.do" class="link arrow-link">전체보기</a>
                 <div class="shop-header-line">
                     <div class="shop-header-color"></div>
                 </div>
@@ -61,7 +61,7 @@
     <div id="shop">
         <div class="shop-header">
             <h3 class="no-margin">추천 특산물</h3>
-            <a href="#" class="link arrow-link">전체보기</a>
+            <a href="../busan/goods.do" class="link arrow-link">전체보기</a>
             <div class="shop-header-line">
                 <div class="shop-header-color"></div>
             </div>
@@ -70,12 +70,14 @@
             <div class="swiper-wrapper">
             	<c:forEach var="vo" items="${gtoplist}" >
 	                <div class="swiper-slide">
+	                  <a href="../busan/goods_detail.do?no=${vo.gno}">
 	                    <img src="${vo.poster}" width="80px" height="80px">
 	                	<div class="text">
 	                		<h5>${vo.gname}</h5>
 	                   		<p>${vo.price}</p>
 	                	</div>
 	                </div>
+	                </a>
                 </c:forEach>
 <!--                 <div class="swiper-slide">
                     <img src="">
