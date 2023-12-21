@@ -4971,16 +4971,24 @@ a{
 #shop .text{
 	overflow: hidden;
 	max-width: 370px;
-	margin-top: 10px;
+}
+#shop .text .badge{
+	color: #fff;
+	font-size: 10px;
+	background-color: red;
+	padding: 2px 6px;
+	border-radius: 50px;
 }
 #shop .text h5{
+	margin-top: 8px;
+	margin-bottom: 5px;
 	font-weight: 600;
 	overflow: hidden;  		
     text-overflow: ellipsis;  	 
     white-space: nowrap; 
 }
 #shop .text p{
-	margin-top: 10px;
+	margin-top: 0;
 	margin-bottom: 0;
 	font-size: 15px;
 	font-weight: 400;
@@ -4994,7 +5002,7 @@ a{
 #festival_activity .swiper .swiper-slide{
 	position: relative;
 }
-#festival_activity .swiper .swiper-slide .text{
+#festival_activity  .text{
 	position: absolute;
 	bottom: 30px;
 	left: 40px;
@@ -5004,12 +5012,24 @@ a{
 	white-space: normal;
 	word-break: keep-all;
 }
-#festival_activity .swiper .swiper-slide .text h3{
+#festival_activity .badge{
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 999;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	background-color: #rgba(0,0,0,0.5);
+	padding: 6px 20px;
+	border-radius: 50px;
+}
+#festival_activity .text h3{
 	margin-bottom: 20px;
 	font-size: 28px;
 	line-height: 1.4;
 }
-#festival_activity .swiper .swiper-slide .text a{
+#festival_activity .text a{
 	display: inline-block;
 	padding: 8px 20px;
 	border-radius: 100px;
@@ -5033,10 +5053,18 @@ a{
 	margin-top: 100px;
 }
 #exhibition .product-card-price{
-	background-color: #000;
-	top: 20px;
-	left: 20px;
 	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	padding: 8px 12px 10px 12px;
+	border-radius: 0 0 10px 10px;
+	background-color: rgba(0,0,0,0.75);
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+	line-height: normal;
 }
 
 #bottom{

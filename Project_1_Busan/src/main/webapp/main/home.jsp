@@ -73,6 +73,7 @@
 	                  <a href="../busan/goods_detail.do?no=${vo.gno}">
 	                    <img src="${vo.poster}" width="80px" height="80px">
 	                	<div class="text">
+	                		<span class="badge">HOT</span>
 	                		<h5>${vo.gname}</h5>
 	                   		<p>${vo.price}</p>
 	                	</div>
@@ -114,6 +115,7 @@
 	                <c:forEach var="vo" items="${ftoplist}" >
 		                <div class="swiper-slide">
 		                    <img class="img" src="${vo.poster}">
+		                    <span class="badge">축제</span>
 		                	<div class="text">
 		                		<h3>${vo.title}</h3>
 	                    		<a href="../busan/festival_detail.do?no=${vo.no}">더보기</a>
@@ -136,6 +138,7 @@
 	                <c:forEach var="vo" items="${atoplist}" >
 		                <div class="swiper-slide">
 		                    <img class="img "src="${vo.poster}">
+		                    <span class="badge">체험</span>
 		                	<div class="text">
 		                		<h3>${vo.title}</h3>
 	                    		<a href="../busan/activity_detail.do?no=${vo.no}">더보기</a>
@@ -171,7 +174,7 @@
                         <p></p>
                         <br>
                         <h6 class="product-card-heading">${vo.ename}</h6>
-                        <div class="product-card-price">${vo.s_date}~${vo.e_date }</div>
+                        <div class="product-card-price">${vo.s_date}~${vo.e_date}</div>
                     </a>
                 </div>
                 </c:forEach>
