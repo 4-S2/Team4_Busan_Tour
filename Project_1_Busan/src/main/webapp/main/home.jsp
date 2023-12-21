@@ -62,14 +62,16 @@
         </div>
         <div class="swiper shopSlide">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="">
-                	<div class="text">
-                		<h5>추천 특산물1</h5>
-                   		<p>추천 특산물1</p>
-                	</div>
-                </div>
-                <div class="swiper-slide">
+            	<c:forEach var="vo" items="${gtoplist}" >
+	                <div class="swiper-slide">
+	                    <img src="${vo.poster }" width="80px" height="80px">
+	                	<div class="text">
+	                		<h5>${vo.gname }</h5>
+	                   		<p>${vo.price }</p>
+	                	</div>
+	                </div>
+                </c:forEach>
+<!--                 <div class="swiper-slide">
                     <img src="">
                 	<div class="text">
                 		<h5>추천 특산물2</h5>
@@ -82,7 +84,7 @@
                 		<h5>추천 특산물3</h5>
                    		<p>추천 특산물3</p>
                 	</div>
-                </div>
+                </div> -->
             </div>
             <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -101,27 +103,15 @@
             </div> -->
             <div class="swiper festivalSlide">
 	            <div class="swiper-wrapper">
-	                <div class="swiper-slide">
-	                	<img src="">
-	                	<div class="text">
-	                		<h3>추천 축제1</h3>
-                    		<p>추천 축제1</p>
-	                	</div>
-	                </div>
-	                <div class="swiper-slide">
-	                	<img src="">
-	                	<div class="text">
-	                		<h3>추천 축제2</h3>
-                    		<p>추천 축제2</p>
-	                	</div>
-	                </div>
-	                <div class="swiper-slide">
-	                	<img src="">
-	                	<div class="text">
-	                		<h3>추천 축제3</h3>
-                    		<p>추천 축제3</p>
-	                	</div>
-	                </div>
+	                <c:forEach var="vo" items="${ftoplist}" >
+		                <div class="swiper-slide">
+		                    <img src="${vo.poster }">
+		                	<div class="text">
+		                		<h3>${vo.title }</h3>
+	                    		<p>추천 축제1</p>
+		                	</div>
+		                </div>
+		             </c:forEach>
 	            </div>
 	            <!-- <div class="swiper-button-next"></div>
 	            <div class="swiper-button-prev"></div>
@@ -135,27 +125,15 @@
             </div> -->
             <div class="swiper activitySlide">
 	            <div class="swiper-wrapper">
-	                <div class="swiper-slide">
-	                    <img src="">
-	                	<div class="text">
-	                		<h3>추천 체험1</h3>
-                    		<p>추천 체험1</p>
-	                	</div>
-	                </div>
-	                <div class="swiper-slide">
-	                    <img src="">
-	                	<div class="text">
-	                		<h3>추천 체험2</h3>
-                    		<p>추천 체험2</p>
-	                	</div>
-	                </div>
-	                <div class="swiper-slide">
-	                    <img src="">
-	                	<div class="text">
-	                		<h3>추천 체험3</h3>
-                    		<p>추천 체험3</p>
-	                	</div>
-	                </div>
+	                <c:forEach var="vo" items="${atoplist}" >
+		                <div class="swiper-slide">
+		                    <img src="${vo.poster }">
+		                	<div class="text">
+		                		<h3>${vo.title }</h3>
+	                    		<p>추천 체험1</p>
+		                	</div>
+		                </div>
+		             </c:forEach>
 	            </div>
 	            <!-- <div class="swiper-button-next"></div>
 	            <div class="swiper-button-prev"></div>
@@ -207,7 +185,9 @@
             </div>
             <ul>
             	<c:forEach var="vo" items="${nlist}">
-                	<li>${vo.ntitle}</li>
+                	<li>
+                		<a href="#" >${vo.ntitle}</a>
+                	</li>
                 </c:forEach>
             </ul>
         </div>
@@ -221,7 +201,9 @@
             </div>
             <ul>
             	<c:forEach var="vo" items="${qlist}">
-                	<li>${vo.subject}</li>
+                	<li>
+                		<a href="#" >${vo.subject}</a>
+                	</li>
                 </c:forEach>
             </ul>
         </div>

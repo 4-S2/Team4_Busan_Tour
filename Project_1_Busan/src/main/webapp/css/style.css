@@ -4798,7 +4798,7 @@ td,th{padding:0}
       추가
 ========================================================================== */
 a{
-  color: #9d9d9d;
+  color: black;
   text-decoration: none;
  }
 
@@ -4896,6 +4896,10 @@ a{
 	width: 100%;
 	border: 1px solid #eee;
 	border-radius: 15px;
+	display: flex;
+    /* justify-content: normal; */
+    padding: 15px;
+
 }
 
 #festival_activity .swiper{
