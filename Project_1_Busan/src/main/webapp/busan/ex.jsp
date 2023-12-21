@@ -38,6 +38,19 @@
     </head>
     
     <body>
+        <div style="margin-top:100px">
+                <div>
+                    <div class="search">
+                        <div>
+                            <form name="Search-Form" method="get" class="subscribe-form">
+                                <input type="text" class="input subscribe-input w-input" name="Search" placeholder="검색어를 입력하세요" 
+                                id="" required style="width:500px"/>
+                                <input type="submit" value="Search" class="button w-button"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="page-wrapper">
             <!-- 경로 -->
             <!-- <div class="section no-padding-vertical">
@@ -77,7 +90,7 @@
                         <div role="list" class="products w-dyn-items">
                             <c:forEach var="vo" items="${list}">
                             <div role="listitem" class="product-card-wrapper w-dyn-item">
-                                <a href="#" class="product-card w-inline-block">
+                                <a href="../busan/ex_detail?eno=${vo.eno }" class="product-card w-inline-block">
                                     <div class="product-card-image-wrapper">
                                         <img src="${vo.poster}" alt="" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
                                     </div>
