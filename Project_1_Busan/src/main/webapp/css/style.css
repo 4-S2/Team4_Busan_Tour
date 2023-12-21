@@ -4826,13 +4826,17 @@ a{
   color: #2b75d5;
   font-weight: bold;
  }
- .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover{
+ .navbar-inverse .navbar-brand:focus,
+ .navbar-inverse .navbar-brand:hover{
   color: #2b75d5;
  }
- .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+ .navbar-inverse .navbar-nav>li>a:focus,
+ .navbar-inverse .navbar-nav>li>a:hover{
   color: #2b75d5;
  }
- .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+ .navbar-inverse .navbar-nav>.open>a,
+ .navbar-inverse .navbar-nav>.open>a:focus,
+ .navbar-inverse .navbar-nav>.open>a:hover{
   background-color: #2b75d5;
  }
 .navbar .icon-cart{
@@ -4868,6 +4872,10 @@ a{
   background-image: url("../images/visual3.jpg");
 }
 
+.shop-header-color{
+	background-color: #a7cdcd;
+}
+
 #foodShop{
   display: flex;
   flex-direction: row;
@@ -4881,7 +4889,6 @@ a{
 #food .product-card-wrapper{
 	width: 32%;
 }
-
 #shop .shopSlide .swiper-wrapper{
 	flex-direction: column;
 }
@@ -4900,7 +4907,6 @@ a{
 #bottom{
   width: 100%;
 }
-
 #bottom .wrapper{
   display: flex;
   flex-wrap: nowrap;
@@ -4909,7 +4915,6 @@ a{
   align-items: flex-start;
   gap: 15px;
 }
-
 #bottom .con-box{
   width: 33.333%;
   padding: 20px;
@@ -4920,11 +4925,9 @@ a{
 #bottom .con-box .shop-header{
 	margin-bottom: 10px;
 }
-
 #bottom .con-box .shop-header-line{
 	margin-top: 0;
 }
-
 #bottom .con-box .link{
 	margin-top: 0;
     padding-right: 0;
@@ -4954,14 +4957,10 @@ a{
   text-overflow: ellipsis;
   word-break: break-all;
 }
-
 #bottom .con-box ul li:last-child{
   border-bottom: none;
 }
 
-.shop-header-color{
-	background-color: #a7cdcd;
-}
 
 
 /* ==========================================================================
