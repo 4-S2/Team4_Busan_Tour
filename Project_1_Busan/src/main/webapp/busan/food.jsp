@@ -23,6 +23,14 @@
             padding: 5px 18px;
             margin: 0px auto;
          }
+         a.tag:hover{
+         color: #2b75d5;
+         text-decoration: none;
+         }
+         a.tag:focus{
+         color: white;
+         text-decoration: none;
+         }
          a {
          transition: color 0.2s; /* 모든 링크에 대한 트랜지션 추가 */
          }
@@ -33,14 +41,21 @@
          background-color: #2b75d5;
          color: white;
          }
+         img{
+           height: 100%;
+           object-fit: cover;
+         }
+         .product-card-image-wrapper{
+           padding:0px;
+         }
         </style>
         <script type="text/javascript">
-            !function(o, c) {
+            /* !function(o, c) {
                 var n = c.documentElement
                   , t = " w-mod-";
                 n.className += t + "js",
                 ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
-            }(window, document);
+            }(window, document); */
             
          // 초기에 선택된 링크
             document.addEventListener('DOMContentLoaded', function() {
