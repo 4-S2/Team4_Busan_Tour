@@ -95,7 +95,7 @@
                 </div>
             </div>
             
-<!--             <div id="tag-wrap">
+<!--        <div id="tag-wrap">
                 <a class="tag" id="link1" href="#" onclick="selectLink(this)"><span>#전체</span></a>
                 <a class="tag" id="link2" href="#" onclick="selectLink(this)"><span>#한식</span></a>
                 <a class="tag" id="link3" href="#" onclick="selectLink(this)"><span>#중식</span></a>
@@ -105,9 +105,7 @@
                 <a class="tag" id="link7" href="#" onclick="selectLink(this)"><span>#카페&베이커리</span></a>
                 <a class="tag" id="link8" href="#" onclick="selectLink(this)"><span>#해산물</span></a>
                 <a class="tag" id="link9" href="#" onclick="selectLink(this)"><span>#그릴</span></a>
-                
             </div> -->
-            
             
             <div class="section">
                 <div class="wrapper">
@@ -138,7 +136,7 @@
                             <div role="listitem" class="product-card-wrapper w-dyn-item">
                                 <a href="#" class="product-card w-inline-block">
                                     <div class="product-card-image-wrapper">
-                                        <img src="${vo.poster}" alt="" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
+                                        <img src="${vo.poster}" alt="썸네일 이미지" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
                                     </div>
                                     <h6 class="product-card-heading">${vo.title}</h6>
                                     <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div>
