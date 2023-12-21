@@ -55,7 +55,7 @@ public class BusanListModel {
 		  List<BusanListVO> list=dao.BusanListData(curpage,"food");
 		  int totalpage=dao.BusanListTotalPage("food");
 		  
-		   final int BLOCK=5;
+		   final int BLOCK=10;
 		   int startPage=((curpage-1)/BLOCK*BLOCK)+1;
 		   int endPage=((curpage-1)/BLOCK*BLOCK)+BLOCK;
 		   

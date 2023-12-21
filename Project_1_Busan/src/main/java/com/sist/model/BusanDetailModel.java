@@ -31,7 +31,6 @@ public class BusanDetailModel {
 		  request.setAttribute("main_jsp", "../busan/food_detail.jsp");
 		  return "../main/main.jsp";
 	}
-	
 	@RequestMapping("busan/tour_detail.do")
 	public String busan_tour_detail(HttpServletRequest request,
 			  HttpServletResponse response)
