@@ -4899,7 +4899,6 @@ a{
 	display: flex;
     /* justify-content: normal; */
     padding: 15px;
-
 }
 
 #festival_activity .swiper{
@@ -4965,6 +4964,51 @@ a{
   border-bottom: none;
 }
 
+#quickMenu{
+	position: fixed;
+	top: 50%;
+	right: 80px;
+	z-index: 999;
+	width: 80px;	
+}
+#quickMenu ul li{
+	width: 60px;
+	height: 60px;
+	border: 10px;
+	overflow: hidden;	
+}
+#quickMenu ul li img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#quickMenu .contactBtn .icon-contact{
+	width: 36px;
+	text-align: center;
+	
+}
+
+#topBtn{
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 9999;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #a7cdcd;
+	cursor: pointer;
+}
+#topBtn .icon-top{
+	display: block;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	margin: 6px auto;
+	line-height: 40px;
+	transform: rotate(-90deg);
+	filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(141deg) brightness(103%) contrast(101%);
+}
 
 
 /* ==========================================================================

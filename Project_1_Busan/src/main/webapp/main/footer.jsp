@@ -54,11 +54,20 @@
 </div>
 
 <div id="quickMenu">
+	<h6>최근 본 목록</h6>
 	<ul>
-		<li></li>
+		<li><img src=""></li>
+		<li><img src=""></li>
+		<li><img src=""></li>
+		<li><img src=""></li>
+		<li><img src=""></li>
 	</ul>
+	<div class="contactBtn">
+		<div class="icon"><img class="icon-contact" src="../images/icon_contact.png"></div>
+		<span>문의하기</span>
+	</div>
 </div>
 
 <div id="topBtn">
-	
+	<img class="icon-top" src="../images/icon_top.png">
 </div>
