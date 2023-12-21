@@ -70,8 +70,8 @@ ${vo.title }
                 <div class="wrapper side-paddings">
                     <div class="product">
                         <div class="product-info">
-                            <h1>제목</h1>
-                            <p class="text-grey">A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy. It is based on a number of factors.</p>
+                            <h1>${vo.title }</h1>
+                            <%-- <p class="text-grey">${vo.cont}</p> --%>
                             <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-price">$ 30.00 USD</div>
                             <div class="full-width">
                             
@@ -93,13 +93,13 @@ ${vo.title }
                         </div>
                         
                         <div class="product-image-wrapper">
-                            <img alt="대표 이미지" src="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min.png" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" sizes="(max-width: 479px) 83vw, (max-width: 767px) 75vw, (max-width: 991px) 76vw, 32vw" srcset="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min-p-500.png 500w, https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min.png 1200w" class="full-width"/>
+                            <img alt="대표 이미지" src="${vo.poster }" sizes="(max-width: 479px) 83vw, (max-width: 767px) 75vw, (max-width: 991px) 76vw, 32vw" />
                         </div>
                         
                         <!-- 상세 설명 -->
                         <div class="product-details-wrapper">
                             <div class="shop-header">
-                                <h5 class="no-margin">상세 설명</h5>
+                                <h5 class="no-margin">${vo.cont}</h5>
                                 <!-- <div class="sku">
                                     <div>SKU: </div>
                                     <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">35009</div>
@@ -110,49 +110,67 @@ ${vo.title }
                             </div>
                             
                             <div class="product-details w-richtext">
-                            	<img src="" alt="상세 이미지"> 
-                            	
-                                <h4>Add Your Product Description</h4>
+                            	<c:forEach var="dimg" items="${vo.deimage}">
+                            		<img src="${dimg }" alt="상세 이미지"> 
+                            	</c:forEach>
+                           	
+<!--  		   vo.setNo(rs.getInt(1));
+	       vo.setTitle(rs.getString(2));
+		   vo.setPoster(rs.getString(3));
+		   vo.setHit(rs.getInt(4));
+		   vo.setCont(rs.getString(5));
+		   vo.setAddr(rs.getString(6));
+		   vo.setPhone(rs.getString(7));
+		   vo.setRate(rs.getString(8));
+		   vo.setBhour(rs.getString(9));
+		   vo.setJjim(rs.getString(10));
+		   vo.setHeart(rs.getInt(11));
+		   vo.setDeimage(rs.getString(12));
+		   vo.setTag(rs.getString(13));  -->                          	
+		   
+<!--                                 <h4>Add Your Product Description</h4>
                                 <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content. A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing. For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Voila!</p>
                                 <h4>Simple &amp;Elegant Template</h4>
                                 <p>Headings, paragraphs, blockquotes, figures, images, and figure captions can all be styled after a class is added to the rich text element using the "When inside of" nested selector system.</p>
                                 <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action.</p>
                                 <h5>Perfect Choice for Your Business</h5>
                                 <p>Grabbing the consumer’s attention isn’t enough; you have to keep that attention for at least a few seconds. This is where your benefits come into play or a product description that sets your offer apart from the others.</p>
-                                <p>‍</p>
+                                <p>‍</p> -->
                             </div>
                             
                             <!-- 해시 태그 -->
                             <div class="tag-list">
-                            	<a href="#"><span></span></a>
+                            <c:forEach var="tag" items="${vo.tag}">
+                            	<a href="#"><span>${tag }</span></a>
+                            </c:forEach>
                             </div>
-                            
+                                                   
                             <div class="product-table">
                                 <div class="product-table-cell">
                                     <div>주소</div>
                                     <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_width_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">38</div>
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_width_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.addr}</div>
                                         <!-- <div>in</div> -->
                                     </div>
                                 </div>
                                 <div class="product-table-cell">
                                     <div>전화번호</div>
                                     <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_height_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">32</div>
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_height_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.phone}</div>
                                         <!-- <div>in</div> -->
                                     </div>
                                 </div>
                                 <div class="product-table-cell">
                                     <div>운영시간</div>
                                     <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">21.5</div>
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.bhour}</div>
                                         <!-- <div>in</div> -->
                                     </div>
                                 </div>
                                 <div class="product-table-cell no-border-bottom">
                                     <div>요금</div>
                                     <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_weight_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">24</div>
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_weight_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.rate}</div>
                                         <!-- <div>oz</div> -->
                                     </div>
                                 </div>
