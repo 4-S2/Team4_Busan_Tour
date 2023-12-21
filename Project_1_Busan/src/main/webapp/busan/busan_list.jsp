@@ -95,7 +95,7 @@
                 </div>
             </div>
             
-<!--        <div id="tag-wrap">
+<!--             <div id="tag-wrap">
                 <a class="tag" id="link1" href="#" onclick="selectLink(this)"><span>#전체</span></a>
                 <a class="tag" id="link2" href="#" onclick="selectLink(this)"><span>#한식</span></a>
                 <a class="tag" id="link3" href="#" onclick="selectLink(this)"><span>#중식</span></a>
@@ -105,12 +105,14 @@
                 <a class="tag" id="link7" href="#" onclick="selectLink(this)"><span>#카페&베이커리</span></a>
                 <a class="tag" id="link8" href="#" onclick="selectLink(this)"><span>#해산물</span></a>
                 <a class="tag" id="link9" href="#" onclick="selectLink(this)"><span>#그릴</span></a>
+                
             </div> -->
+            
             
             <div class="section">
                 <div class="wrapper">
                     <div class="shop-header">
-                        <h3 class="no-margin w-hidden-small w-hidden-tiny">축제</h3>
+                        <h3 class="no-margin w-hidden-small w-hidden-tiny">${cate}</h3>
                         <div class="shop-categories-wrapper">
                             <a href="/catalog" aria-current="page" class="shop-category-link w--current">최신순</a>
                             <div class="w-dyn-list">
@@ -134,9 +136,9 @@
                         <div role="list" class="products w-dyn-items">
                             <c:forEach var="vo" items="${list}">
                             <div role="listitem" class="product-card-wrapper w-dyn-item">
-                                <a href="#" class="product-card w-inline-block">
+                                <a href="tour_detail.do?no=${vo.no }" class="product-card w-inline-block">
                                     <div class="product-card-image-wrapper">
-                                        <img src="${vo.poster}" alt="썸네일 이미지" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
+                                        <img src="${vo.poster}" alt="" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
                                     </div>
                                     <h6 class="product-card-heading">${vo.title}</h6>
                                     <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div>
@@ -157,13 +159,13 @@
                             => &lt;
                         --%>
                         <c:if test="${startPage>1}">
-                            <li><a href="festival.do?page=${startPage-1}">&lt;</a></li>
+                            <li><a href="${tab}.do?page=${startPage-1}">&lt;</a></li>
                         </c:if>
                         <c:forEach var="i" begin="${startPage}" end="${endPage}">
-                            <li ${curpage==i?"class=active":""}><a href="festival.do?page=${i}">${i}</a></li>
+                            <li ${curpage==i?"class=active":""}><a href="${tab}.do?page=${i}">${i}</a></li>
                         </c:forEach>
                         <c:if test="${endPage<totalpage}">
-                            <li><a href="festival.do?page=${endPage+1}">&gt;</a></li>
+                            <li><a href="${tab}.do?page=${endPage+1}">&gt;</a></li>
                         </c:if>
                     </ul>
                 </div>
