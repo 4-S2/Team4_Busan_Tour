@@ -106,7 +106,7 @@ public class ExDAO {
 	                + "FROM (SELECT eno, ename, poster, s_date, e_date , rownum as num "
 	                + "FROM (SELECT eno, ename, poster,s_date, e_date   "
 	                + "FROM exhibition ORDER BY elike DESC) "
-	                + "WHERE rownum <= 4)";
+	                + "WHERE rownum <= 5)";
 
 	        ps = conn.prepareStatement(sql);
 	        rs = ps.executeQuery();
