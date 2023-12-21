@@ -139,9 +139,9 @@ public class ExDAO {
 	    return list;
 	}
    
-   public List<ExVO> exDetailData(int eno)
+   public ExVO exDetailData(int eno)
    {
-	   List<ExVO> list=new ArrayList<ExVO>();
+	   ExVO vo=new ExVO();
 	   try
 	   {
 		   // 1. 연결 
@@ -161,7 +161,7 @@ public class ExDAO {
 		   ResultSet rs=ps.executeQuery();
 		   while(rs.next()) // 출력 1번째 위치부터 읽기 시작 
 		   {
-			   ExVO vo=new ExVO();
+			   
 			   vo.setEno(rs.getInt(1));
 			   vo.setEname(rs.getString(2));
 			   vo.setEename(rs.getString(3));
@@ -182,7 +182,7 @@ public class ExDAO {
 			   vo.setPrice(rs.getInt(17));
 			   vo.setHit(rs.getInt(18));
 			   
-			   list.add(vo);
+			   
 		   }
 		   rs.close();
 	   }catch(Exception ex)
@@ -195,7 +195,7 @@ public class ExDAO {
 		   // 반환 => 재사용 
 		   dbconn.disConnection(conn, ps);
 	   }
-	   return list;
+	   return vo;
    }
 
    

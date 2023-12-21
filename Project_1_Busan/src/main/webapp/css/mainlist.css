@@ -1,0 +1,14 @@
+.product-card {
+     overflow: hidden;
+   }
+#food .product-card-wrapper{
+	height: 360px;
+}
+#food img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#food .product-card{
+	padding: 0px 0px 32px;
+}

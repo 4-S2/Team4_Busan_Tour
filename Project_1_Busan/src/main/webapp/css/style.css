@@ -3426,6 +3426,7 @@ td,th{padding:0}
      transition: transform 300ms ease, box-shadow 300ms ease, -webkit-transform 300ms ease;
      text-align: center;
      text-decoration: none;
+     overflow: hidden;
    }
    
    .product-card:hover {
