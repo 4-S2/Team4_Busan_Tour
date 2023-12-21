@@ -4909,9 +4909,7 @@ a{
 .shop-header-color{
 	background-color: #a7cdcd;
 }
-.products{
-	flex-wrap: nowrap;
-}
+
 .product-card {
     overflow: hidden;
 }
@@ -4924,6 +4922,9 @@ a{
   gap: 40px;
   width: 1200px;
   margin: 0 auto;
+}
+#food .products{
+	flex-wrap: nowrap;
 }
 #food .product-card{
 	padding: 0;
@@ -5091,6 +5092,13 @@ a{
 #bottom .con-box ul li:last-child{
   border-bottom: none;
   padding-bottom: 0;
+}
+#bottom .service h2{
+	margin-top: 20px;
+	color: #005eb4;
+}
+#bottom .service p{
+	margin-bottom: 0;
 }
 
 #quickMenu{

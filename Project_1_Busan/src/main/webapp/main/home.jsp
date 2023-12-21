@@ -46,13 +46,10 @@
                             </div> --%>
                             <%--
                             <h6 class="product-card-heading">${vo.title}</h6>
-<<<<<<< HEAD
                             <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">${vo.title}</div>
                             
                              --%>
-=======
                             <!-- div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div> -->
->>>>>>> branch 'master' of https://github.com/4-S2/Team4_Busan_Tour.git
                         </a>
                     </div> 
                     </c:forEach>
@@ -73,10 +70,10 @@
             <div class="swiper-wrapper">
             	<c:forEach var="vo" items="${gtoplist}" >
 	                <div class="swiper-slide">
-	                    <img src="${vo.poster }" width="80px" height="80px">
+	                    <img src="${vo.poster}" width="80px" height="80px">
 	                	<div class="text">
-	                		<h5>${vo.gname }</h5>
-	                   		<p>${vo.price }</p>
+	                		<h5>${vo.gname}</h5>
+	                   		<p>${vo.price}</p>
 	                	</div>
 	                </div>
                 </c:forEach>
@@ -218,7 +215,14 @@
         </div>
         <div class="service con-box">
             <h4>고객센터</h4>
-
+            <div class="shop-header-line">
+                <div class="shop-header-color"></div>
+            </div>
+			<h2>관광문의 : 1330</h2>
+			<p>민원대표 전화 : 051-120<br>
+			운영시간 : 평일 08:30 ~ 18:30<br>
+			야간/공휴일 등 근무시간외는 당직실로 전환<br>
+			email : busantour@gmail.com</p>
         </div>
     </div>
 </div>
