@@ -28,23 +28,36 @@ public class MainModel {
 	  
 		
 		BusanDAO topdao = BusanDAO.newInstance();
+		GoodsDAO gtopdao = GoodsDAO.newInstance();
         ExDAO exTopDao = ExDAO.newInstance();
         
         NoticeDAO ndao = NoticeDAO.newInstance();
         QnaBoardDAO qdao = QnaBoardDAO.newInstance();
 		
-		 // 인기 맛집 Top 3 
+		 // 추천 맛집 Top 3 
 		 List<BusanListVO> fdtoplist = topdao.findTop3("food");
 		 request.setAttribute("fdtoplist", fdtoplist);
+		 
+		// 추천 특산물 Top 3
+		 List<GoodsVO> gtoplist = gtopdao.goodsfindTop3();
+		 request.setAttribute("gtoplist", gtoplist);
+		 
+		// 추천 체험 Top 3 
+		 List<BusanListVO> atoplist = topdao.findTop3("activity");
+		 request.setAttribute("atoplist", atoplist);
+		 
+		// 추천 축제 Top 3 
+		 List<BusanListVO> ftoplist = topdao.findTop3("festival");
+		 request.setAttribute("ftoplist", ftoplist);
 		 
 		 List<ExVO> exToplist = exTopDao.mainpage_exData();
 		 request.setAttribute("exToplist", exToplist);
 		 
-		 // 공지사항 1-4번
+		 // 공지사항 nno 1-4번
 		 List<NoticeVO> nlist = ndao.noticefind4();
 		 request.setAttribute("nlist", nlist);
 		 
-		 // 묻고 답하기 1-4번
+		 // 묻고 답하기 qno 6,8,10,7번 
 		 List<QnaBoardVO> qlist = qdao.Qnafind4();
 		 request.setAttribute("qlist", qlist);
 		 
