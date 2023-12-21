@@ -47,6 +47,27 @@
          }
          .product-card-image-wrapper{
            padding:0px;
+           height: 260px;
+         }
+         .product-card {
+         overflow: hidden;
+         }
+         .product-card-wrapper{
+	     height: 360px;
+         }
+         img{
+	 	 width: 100%;
+	     height: 100%;
+	     object-fit: cover;
+         }
+         .product-card{
+	     padding: 0px 0px 0px;
+         }
+         .subscribe-form{
+         margin-top: 130px;
+         }
+         .button{
+         background-color: #2b75d5;
          }
         </style>
         <script type="text/javascript">
