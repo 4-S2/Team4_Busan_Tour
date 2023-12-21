@@ -65,23 +65,19 @@ public class ExListModel {
 	}
 	
 	@RequestMapping("busan/ex_detail.do")
-	public String detail_ex(HttpServletRequest request,
+	public String ex_detail(HttpServletRequest request,
 			  HttpServletResponse response)
 	{
 		  // DB연동 
 		  //1. 요청값 받기
-		String eno=request.getParameter("eno");  
-		
+		  String eno=request.getParameter("eno");
+
 		  ExDAO dao=new ExDAO();
-		 
 		  ExVO vo=dao.exDetailData(Integer.parseInt(eno));
-		  
-		  
 		 
 		  request.setAttribute("vo", vo);
 		  //3. 결과값 모아서 request에 저장 
-		  request.setAttribute("main_jsp", "../busan/ex.jsp");
-		  request.setAttribute("main_jsp", "../busan/ex.jsp");
+		  request.setAttribute("main_jsp", "../busan/ex_detail.jsp");
 		  return "../main/main.jsp";
 	}
 	

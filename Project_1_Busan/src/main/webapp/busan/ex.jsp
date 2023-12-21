@@ -90,7 +90,7 @@
                         <div role="list" class="products w-dyn-items">
                             <c:forEach var="vo" items="${list}">
                             <div role="listitem" class="product-card-wrapper w-dyn-item">
-                                <a href="../busan/ex_detail?eno=${vo.eno }" class="product-card w-inline-block">
+                                <a href="../busan/ex_detail" class="product-card w-inline-block">
                                     <div class="product-card-image-wrapper">
                                         <img src="${vo.poster}" alt="" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
                                     </div>
