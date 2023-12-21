@@ -4,3 +4,8 @@
 #food .product-card-wrapper{
 	height: 360px;
 }
+.foodlistimage{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
