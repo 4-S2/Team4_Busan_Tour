@@ -39,7 +39,7 @@
                     <c:forEach var="vo" items="${fdtoplist}" varStatus="f">
                     <div data-w-id="86c7c915-bcbe-c30c-93c0-5bed50ef155d" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
                         <a href="#" class="product-card w-inline-block">
-                        <img class="foodlistimg" alt="" src="${vo.poster}"/>
+                        <img class="foodlistimage" alt="" src="${vo.poster}"/>
                             <%-- <div class="product-card-image-wrapper">
                                 <img alt="" src="${vo.poster}"/>
                             </div> --%>
