@@ -39,9 +39,10 @@
                     <c:forEach var="vo" items="${fdtoplist}" varStatus="f">
                     <div data-w-id="86c7c915-bcbe-c30c-93c0-5bed50ef155d" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
                         <a href="#" class="product-card w-inline-block">
-                            <div class="product-card-image-wrapper">
+                        <img class="foodlistimg" alt="" src="${vo.poster}"/>
+                            <%-- <div class="product-card-image-wrapper">
                                 <img alt="" src="${vo.poster}"/>
-                            </div>
+                            </div> --%>
                             <h6 class="product-card-heading">${vo.title}</h6>
                             <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div>
                         </a>

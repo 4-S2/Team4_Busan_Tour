@@ -1,0 +1,6 @@
+.product-card {
+     overflow: hidden;
+   }
+#food .product-card-wrapper{
+	height: 360px;
+}
