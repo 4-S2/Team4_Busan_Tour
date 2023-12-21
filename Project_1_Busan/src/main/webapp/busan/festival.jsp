@@ -11,6 +11,29 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link href="../css/style.css" rel="stylesheet" type="text/css"/> 
+        <style type="text/css">
+         #tag-wrap{
+           margin-top:50px;
+           text-align:center; 
+         }
+         a.tag{
+            border: 1px solid #dbeeff;
+            display: inline-block;
+            border-radius: 25px;
+            padding: 5px 18px;
+            margin: 0px auto;
+         }
+         a {
+         transition: color 0.2s; /* 모든 링크에 대한 트랜지션 추가 */
+         }
+         span{
+         	display: inline-block;
+         }
+         .selected-link {
+         background-color: #2b75d5;
+         color: white;
+         }
+        </style>
         <script type="text/javascript">
             !function(o, c) {
                 var n = c.documentElement
@@ -18,6 +41,26 @@
                 n.className += t + "js",
                 ("ontouchstart"in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
             }(window, document);
+            
+         // 초기에 선택된 링크
+            document.addEventListener('DOMContentLoaded', function() {
+              var initialLink = document.getElementById('link1'); // 링크의 ID에 따라 변경
+              selectLink(initialLink);
+            });
+
+            // 링크 클릭시 호출되는 함수
+            function selectLink(link) {
+              // 현재 선택된 링크에 대한 스타일 적용
+              link.classList.add('selected-link');
+              
+              // 현재 선택된 링크 이외의 다른 링크에 대한 스타일 제거
+              var allLinks = document.querySelectorAll('a');
+              for (var i = 0; i < allLinks.length; i++) {
+                if (allLinks[i] !== link) {
+                  allLinks[i].classList.remove('selected-link');
+                }
+              }
+            }
         </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -38,18 +81,34 @@
     </head>
     
     <body>
-        <div class="page-wrapper">
-            <!-- 경로 -->
-            <!-- <div class="section no-padding-vertical">
-                <div class="wrapper side-paddings">
-                    <div class="breadcrumbs">
-                        <a href="/" class="link-grey">Home</a>
-                        <img src="https://assets.website-files.com/5badda2935e11303a89a461e/5baf79eb570913b9781a96f2_arrow-right-mini-icon.svg" alt="" class="breadcrumbs-arrow"/>
-                        <div>Catalog</div>
+            <div style="margin-top:100px">
+                <div>
+                    <div class="search">
+                        <div>
+                            <form name="Search-Form" method="get" class="subscribe-form">
+                                <input type="text" class="input subscribe-input w-input" name="Search" placeholder="검색어를 입력하세요" 
+                                id="" required style="width:500px"/>
+                                <input type="submit" value="Search" class="button w-button"/>
+                            </form>
+                        </div>
                     </div>
                 </div>
+            </div>
+            
+<!--             <div id="tag-wrap">
+                <a class="tag" id="link1" href="#" onclick="selectLink(this)"><span>#전체</span></a>
+                <a class="tag" id="link2" href="#" onclick="selectLink(this)"><span>#한식</span></a>
+                <a class="tag" id="link3" href="#" onclick="selectLink(this)"><span>#중식</span></a>
+                <a class="tag" id="link4" href="#" onclick="selectLink(this)"><span>#일식</span></a>
+                <a class="tag" id="link5" href="#" onclick="selectLink(this)"><span>#아세안요리</span></a>
+                <a class="tag" id="link6" href="#" onclick="selectLink(this)"><span>#양식</span></a>             
+                <a class="tag" id="link7" href="#" onclick="selectLink(this)"><span>#카페&베이커리</span></a>
+                <a class="tag" id="link8" href="#" onclick="selectLink(this)"><span>#해산물</span></a>
+                <a class="tag" id="link9" href="#" onclick="selectLink(this)"><span>#그릴</span></a>
+                
             </div> -->
-
+            
+            
             <div class="section">
                 <div class="wrapper">
                     <div class="shop-header">

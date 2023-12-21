@@ -11,13 +11,13 @@
 	    <ul class="nav navbar-nav">
 	        <li class="dropdown">
 	            <a class="dropdown-toggle" data-toggle="dropdown" href="#">부산 여행<span class="caret"></span></a>
-	            <ul class="dropdown-menu">
-		            <li><a href="#">명소</a></li>
-		            <li><a href="../busan/food.do">맛집</a></li>
-		            <li><a href="../busan/festival.do">축제</a></li>
-		            <li><a href="#">체험</a></li>
-		            <li><a href="../busan/ex.do">전시</a></li>
-	            </ul>
+		            <ul class="dropdown-menu">
+			            <li><a href="../busan/tour.do">명소</a></li>
+			            <li><a href="../busan/food.do">맛집</a></li>
+			            <li><a href="../busan/festival.do">축제</a></li>
+			            <li><a href="../busan/activity.do">체험</a></li>
+			            <li><a href="../busan/ex.do">전시</a></li>
+		            </ul>
 	        </li>
 	        
 	        <li><a href="#">특산물 쇼핑</a></li>
