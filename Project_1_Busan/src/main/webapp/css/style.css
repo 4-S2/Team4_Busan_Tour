@@ -3281,7 +3281,7 @@ td,th{padding:0}
      display: -ms-flexbox;
      display: flex;
      width: 100%;
-     padding-top: 32px;
+     /*padding-top: 32px;*/
      -webkit-box-pack: center;
      -webkit-justify-content: center;
      -ms-flex-pack: center;
