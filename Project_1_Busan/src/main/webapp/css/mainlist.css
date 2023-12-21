@@ -25,6 +25,10 @@
 	font-weight: bold;
 	
 }
+#exhibition .product-card-wrapper{
+	width: 19%;
+	margin-bottom: 0 !important;
+}
 #exhibition .product-card{
 	position: relative;
 }
@@ -32,6 +36,8 @@
 #exhibition img{
 	position: absolute;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	margin-top: 100px;
 }
 
