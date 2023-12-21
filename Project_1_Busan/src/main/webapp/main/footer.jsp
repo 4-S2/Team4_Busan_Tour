@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
     
 <div class="section color no-padding-vertical">
 	<div class="wrapper text-white">
 	    <div class="footer">
 	        <div class="footer-left">
 	            <a href="/" aria-current="page" class="footer-brand w-nav-brand w--current">
-	                <div>ToyStore</div>
+	                <div>Busan Tour</div>
 	            </a>
 	        </div>
 	        <!-- <div class="footer-nav">
@@ -52,21 +54,22 @@
         </div>
     </div>
 </div>
-
+	
 <div id="quickMenu">
+	<c:if test="${recentList.size() > 0 }">	
 	<h6>최근 본 목록</h6>
 	<ul>
-		<li><img src=""></li>
-		<li><img src=""></li>
-		<li><img src=""></li>
-		<li><img src=""></li>
-		<li><img src=""></li>
+		<c:forEach var="vo" items="${recentList }">
+			<li><a href="../busan/tour_detail.do?no=${vo.no }"><img src="${vo.poster }"></a></li>
+		</c:forEach>
 	</ul>
+	</c:if>	
 	<div class="contactBtn">
 		<div class="icon"><img class="icon-contact" src="../images/icon_contact.png"></div>
 		<span>문의하기</span>
 	</div>
 </div>
+
 
 <div id="topBtn">
 	<img class="icon-top" src="../images/icon_top.png">

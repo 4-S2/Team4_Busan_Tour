@@ -1,7 +1,11 @@
 package com.sist.model;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.StringTokenizer;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -33,6 +37,24 @@ public class MainModel {
         
         NoticeDAO ndao = NoticeDAO.newInstance();
         QnaBoardDAO qdao = QnaBoardDAO.newInstance();
+        
+		Cookie[] cookies = request.getCookies();
+		List<BusanListVO> recentList = new ArrayList<>();
+		if(cookies!=null) {
+			for(Cookie c : cookies) {
+				if(c.getName().endsWith("_recent")) {
+					String value = c.getValue();
+					StringTokenizer st = new StringTokenizer(value, "|");
+					
+					while(st.hasMoreTokens()) {
+						int no = Integer.parseInt(st.nextToken());
+						recentList.add(topdao.busanDetailData(no,"tour"));
+					}
+				}
+			}
+		}
+		Collections.reverse(recentList);
+		request.setAttribute("recentList", recentList);
 		
 		 // 추천 맛집 Top 3 
 		 List<BusanListVO> fdtoplist = topdao.findTop3("food");

@@ -136,7 +136,7 @@
                         <div role="list" class="products w-dyn-items">
                             <c:forEach var="vo" items="${list}">
                             <div role="listitem" class="product-card-wrapper w-dyn-item">
-                                <a href="#" class="product-card w-inline-block">
+                                <a href="tour_detail.do?no=${vo.no }" class="product-card w-inline-block">
                                     <div class="product-card-image-wrapper">
                                         <img src="${vo.poster}" alt="" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw"/>
                                     </div>

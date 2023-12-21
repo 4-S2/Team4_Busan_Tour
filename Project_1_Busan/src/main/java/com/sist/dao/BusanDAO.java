@@ -197,9 +197,9 @@ public class BusanDAO {
 	   return list;
    }
    //부산 상세보기
-   public List<BusanListVO> busanDetailData(int no,String tab)
+   public BusanListVO busanDetailData(int no,String tab)
    {  
-	   List<BusanListVO> list=new ArrayList<>();
+	   BusanListVO vo=new BusanListVO();
 	   try
 	   {
 		   // 1. 연결 
@@ -211,8 +211,7 @@ public class BusanDAO {
 		   ps=conn.prepareStatement(sql);
 		   // 4. 실행후에 결과값을 받는다 
 		   ResultSet rs=ps.executeQuery();
-		   rs.next();
-		   BusanListVO vo=new BusanListVO();
+		   if(rs.next()) {
 		   vo.setNo(rs.getInt(1));
 	       vo.setTitle(rs.getString(2));
 		   vo.setPoster(rs.getString(3));
@@ -226,7 +225,7 @@ public class BusanDAO {
 		   vo.setHeart(rs.getInt(11));
 		   vo.setDeimage(rs.getString(12));
 		   vo.setTag(rs.getString(13));
-		   list.add(vo);
+		   }
 		   rs.close();
 	   }catch(Exception ex)
 	   {
@@ -238,7 +237,7 @@ public class BusanDAO {
 		   // 반환 => 재사용 
 		   dbconn.disConnection(conn, ps);
 	   }
-	   return list;
+	   return vo;
    }
    
 }
