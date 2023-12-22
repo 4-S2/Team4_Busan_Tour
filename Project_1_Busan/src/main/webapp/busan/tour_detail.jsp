@@ -141,7 +141,7 @@ ${vo.title }
                             <!-- 해시 태그 -->
                             <div class="tag-list">
                             <c:forEach var="tag" items="${vo.tag}">
-                            	<a href="#"><span>#${tag }&nbsp;</span></a>
+                            	<a href="#"><span>${tag }</span></a>
                             </c:forEach>
                             </div>
                                                    

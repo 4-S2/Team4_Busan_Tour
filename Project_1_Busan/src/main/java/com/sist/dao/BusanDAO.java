@@ -137,7 +137,7 @@ public class BusanDAO {
    
 
    // 푸드 상세보기
-   public List<BusanListVO> foodDetailData(int no)
+   public BusanListVO foodDetailData(int no)
    {
 	   /*
 	    * private int no;
@@ -153,7 +153,7 @@ public class BusanDAO {
 		   private String deimage;
 		   private String rdate;
 	    */
-	   List<BusanListVO> list=new ArrayList<>();
+	   BusanListVO vo=new BusanListVO();
 	   try
 	   {
 		   // 1. 연결 
@@ -166,7 +166,7 @@ public class BusanDAO {
 		   // 4. 실행후에 결과값을 받는다 
 		   ResultSet rs=ps.executeQuery();
 		   rs.next();
-		   BusanListVO vo=new BusanListVO();
+		   
 		   vo.setNo(rs.getInt(1));
 	       vo.setTitle(rs.getString(2));
 		   vo.setPoster(rs.getString(3));
@@ -186,7 +186,6 @@ public class BusanDAO {
 			String[] dimgs = dimage.split("\\^");
 		   vo.setDeimage(dimgs);
 		   vo.setRdate(rs.getString(15));
-		   list.add(vo);
 		   rs.close();
 	   }catch(Exception ex)
 	   {
@@ -198,7 +197,7 @@ public class BusanDAO {
 		   // 반환 => 재사용 
 		   dbconn.disConnection(conn, ps);
 	   }
-	   return list;
+	   return vo;
    }
    //부산 상세보기
    public BusanListVO busanDetailData(int no,String tab)
