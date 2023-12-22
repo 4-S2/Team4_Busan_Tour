@@ -6,24 +6,31 @@
 <head>
   <meta charset="UTF-8">
   <title>회원가입</title>
-  <style>
+   <style>
     
     body {
       font-family: sans-serif;
+      background-color: #f0f0f0; /* Light gray background */
     }
-    label{
-     display: inline;
+
+    label {
+      display: inline;
     }
 
     .container {
       width: 500px;
       margin: 0 auto;
       padding: 20px;
+      background-color: #ffffff; /* White container background */
+      border: 1px solid #ddd; /* Light gray border */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
     }
 
     .title {
       font-size: 24px;
       text-align: center;
+      color: #3498db; /* Blue title color */
     }
 
     .form-group {
@@ -33,37 +40,31 @@
     .form-control {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #3498db; /* Blue border */
       border-radius: 5px;
     }
 
     .required {
       color: red;
-     
+    }
+
+    .join-button, .btn1 {
+      width: 100px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff; /* White text color */
     }
 
     .join-button {
-      align: center;
-      width: 100px;
-      height: 40px;
-      background-color: #FFF;
-      color: #WHITE;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      background-color: #3498db; /* Blue button background */
     }
+
     .btn1 {
-    align: center;
-      width: 100px;
-      height: 40px;
-      background-color: #000;
-      color: #eee;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+      background-color: #000; /* Black button background */
     }
-    
-    
+
   </style>
    <script>
         function goBack() {
@@ -71,7 +72,7 @@
         }
     </script>
 </head>
-<body>
+  <body>
     <div class="container">
         <h2 class="title">회원가입</h2>
         <form action="RegisterServlet" method="post"> <!-- Assuming you have a servlet named RegisterServlet to handle the form submission -->

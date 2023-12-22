@@ -55,7 +55,7 @@
     </div>
 </div>
 	
-<div id="quickMenu">
+<div id="cookieBar">
 	<c:if test="${recentList.size() > 0 }">	
 	<h6>최근 본 목록</h6>
 	<ul>
@@ -64,13 +64,13 @@
 		</c:forEach>
 	</ul>
 	</c:if>	
-	<div class="contactBtn">
-		<div class="icon"><img class="icon-contact" src="../images/icon_contact.png"></div>
-		<span>문의하기</span>
-	</div>
 </div>
 
+<a href="#" id="contactBtn" class="fixed-btn">
+	<img class="icon icon-contact" src="../images/icon_contact.png">
+</a>
 
-<div id="topBtn">
-	<img class="icon-top" src="../images/icon_top.png">
-</div>
+<a href="#" id="topBtn" class="fixed-btn">
+	<img class="icon icon-top" src="../images/icon_top.png">
+</a>
+
