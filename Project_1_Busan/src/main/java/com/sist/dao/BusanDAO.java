@@ -182,9 +182,12 @@ public class BusanDAO {
 		   vo.setTag(tags);
 		   vo.setJjim(rs.getString(12));
 		   vo.setHeart(rs.getInt(13));
-			String dimage = rs.getString(14);
-			String[] dimgs = dimage.split("\\^");
-		   vo.setDeimage(dimgs);
+			/*
+			 * String dimage = rs.getString(14); 
+			 * String[] dimgs = dimage.split("\\^");
+			 * vo.setDeimage(dimgs);
+			 */
+		   vo.setDeimage(rs.getString(14));
 		   vo.setRdate(rs.getString(15));
 		   rs.close();
 	   }catch(Exception ex)
@@ -226,9 +229,12 @@ public class BusanDAO {
 		   vo.setBhour(rs.getString(9));
 		   vo.setJjim(rs.getString(10));
 		   vo.setHeart(rs.getInt(11));
-			String dimage = rs.getString(12);
-			String[] dimgs = dimage.split("\\^");
-		   vo.setDeimage(dimgs);
+			/*
+			 * String dimage = rs.getString(12); 
+			 * String[] dimgs = dimage.split("\\^");
+			 * vo.setDeimage(dimgs);
+			 */
+		   vo.setDeimage(rs.getString(12));
 			String tag = rs.getString(13);
 			String[] tags = tag.split("#");
 		   vo.setTag(tags);
