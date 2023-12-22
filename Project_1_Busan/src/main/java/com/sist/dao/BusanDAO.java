@@ -178,8 +178,8 @@ public class BusanDAO {
 		   vo.setRestday(rs.getString(9));
 		   vo.setBhour(rs.getString(10));
 			String tag = rs.getString(11);
-			String[] tags = tag.split("\\#");
-//		   vo.setTag(tags);
+			String[] tags = tag.split("#");
+		   vo.setTag(tags);
 		   vo.setJjim(rs.getString(12));
 		   vo.setHeart(rs.getInt(13));
 			String dimage = rs.getString(14);
@@ -231,8 +231,8 @@ public class BusanDAO {
 			String[] dimgs = dimage.split("\\^");
 		   vo.setDeimage(dimgs);
 			String tag = rs.getString(13);
-			String[] tags = tag.split("\\#");
-//		   vo.setTag(tags);
+			String[] tags = tag.split("#");
+		   vo.setTag(tags);
 		   }
 		   rs.close();
 	   }catch(Exception ex)

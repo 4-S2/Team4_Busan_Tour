@@ -5020,7 +5020,7 @@ a{
 	color: #fff;
 	font-size: 14px;
 	font-weight: 600;
-	background-color: #rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.5);
 	padding: 6px 20px;
 	border-radius: 50px;
 }
