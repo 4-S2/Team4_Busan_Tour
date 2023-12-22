@@ -180,7 +180,7 @@
             <div class="section">
                 <div class="wrapper">
                     <div class="shop-header">
-                        <h3>추천 전시</h3>
+                        <h3>진행 중인 전시</h3>
                         <a href="/catalog" class="link arrow-link">전체보기</a>
                         <div class="shop-header-line">
                             <div class="shop-header-color"></div>
@@ -191,9 +191,9 @@
                             <div data-w-id="df75c36d-8d89-3a15-6c0d-6078372525bd" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
                                 <a href="/product/happy-dog" class="product-card w-inline-block">
                                     <div class="product-card-image-wrapper">
-                                        <img alt="썸네일 이미지" src="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5baf5171ace69cb064b33d42_33388-1-wooden-toy-photos-min.png" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" sizes="(max-width: 479px) 73vw, (max-width: 767px) 34vw, (max-width: 991px) 33vw, 12vw" srcset="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5baf5171ace69cb064b33d42_33388-1-wooden-toy-photos-min-p-500.png 500w, https://assets.website-files.com/5baddb6a35e113da0e9a4802/5baf5171ace69cb064b33d42_33388-1-wooden-toy-photos-min.png 1200w"/>
+                                        <img alt="썸네일 이미지" src="${vo.poster}"/>
                                     </div>
-                                    <h6 class="product-card-heading">Happy Dog</h6>
+                                    <h6 class="product-card-heading">${vo.poster}</h6>
                                     <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-card-price">$ 30.00 USD</div>
                                 </a>
                             </div>
