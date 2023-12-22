@@ -22,7 +22,7 @@ ${vo.title }
     <head>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <title>Busan Tour | 명소 | ${vo.title}</title>
+        <title>Busan Tour | ${cate} | ${vo.title}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link href="../css/style.css" rel="stylesheet" type="text/css"/> 

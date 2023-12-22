@@ -42,13 +42,37 @@ public class MainModel {
 		List<BusanListVO> recentList = new ArrayList<>();
 		if(cookies!=null) {
 			for(Cookie c : cookies) {
-				if(c.getName().endsWith("_recent")) {
+				if(c.getName().startsWith("tour")) {
 					String value = c.getValue();
 					StringTokenizer st = new StringTokenizer(value, "|");
 					
 					while(st.hasMoreTokens()) {
 						int no = Integer.parseInt(st.nextToken());
 						recentList.add(topdao.busanDetailData(no,"tour"));
+					}
+				}else if(c.getName().startsWith("festival")) {
+					String value = c.getValue();
+					StringTokenizer st = new StringTokenizer(value, "|");
+					
+					while(st.hasMoreTokens()) {
+						int no = Integer.parseInt(st.nextToken());
+						recentList.add(topdao.busanDetailData(no,"festival"));
+					}
+				}else if(c.getName().startsWith("activity")) {
+					String value = c.getValue();
+					StringTokenizer st = new StringTokenizer(value, "|");
+					
+					while(st.hasMoreTokens()) {
+						int no = Integer.parseInt(st.nextToken());
+						recentList.add(topdao.busanDetailData(no,"activity"));
+					}
+				}else if(c.getName().startsWith("food")) {
+					String value = c.getValue();
+					StringTokenizer st = new StringTokenizer(value, "|");
+					
+					while(st.hasMoreTokens()) {
+						int no = Integer.parseInt(st.nextToken());
+						recentList.add(topdao.busanDetailData(no,"food"));
 					}
 				}
 			}
@@ -83,22 +107,11 @@ public class MainModel {
 		 List<QnaBoardVO> qlist = qdao.Qnafind4();
 		 request.setAttribute("qlist", qlist);
 		 
-		/*
-		 * // 인기 명소 Top 6 List<BusanListVO> ttoplist = topdao.findTop6("tour");
-		 * request.setAttribute("ttoplist", ttoplist);
-		 * 
-		 * // 인기 맛집 Top 3 List<BusanListVO> fdtoplist = topdao.findTop6("food");
-		 * request.setAttribute("fdtoplist", fdtoplist);
-		 * 
-		 * // 인기 축제 Top 6 List<BusanListVO> ftoplist = topdao.findTop6("festival");
-		 * request.setAttribute("ftoplist", ftoplist);
-		 * 
-		 * // 인기 체험 Top 6 List<BusanListVO> atoplist = topdao.findTop6("activity");
-		 * request.setAttribute("atoplist", atoplist);*/
 		 
 		 request.setAttribute("main_jsp", "../main/home.jsp"); 
 		 return "../main/main.jsp";
 		 
 	  
+  
   }
 }
