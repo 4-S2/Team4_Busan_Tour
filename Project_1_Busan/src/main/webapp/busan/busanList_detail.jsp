@@ -70,7 +70,7 @@
                     </div>
                     
                     <div class="product-details w-richtext">
-                    	<c:forEach var="dimg" items="${vo.deimage}">
+                    	<c:forEach var="dimg" items="${vo.deimage}" >
                     		<img src="${dimg }" alt="상세 이미지"> 
                     	</c:forEach>
                    	

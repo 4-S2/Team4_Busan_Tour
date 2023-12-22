@@ -15,7 +15,7 @@ public class BusanListVO {
 		   private String[] tag;
 		   private String jjim;
 		   private int heart;
-		   private String deimage;
+		   private String[] deimage;
 		   private String rdate;
 		   private String rate;
 		
@@ -27,10 +27,10 @@ public class BusanListVO {
 		public void setTag(String[] tag) {
 			this.tag = tag;
 		}
-		public String getDeimage() {
+		public String[] getDeimage() {
 			return deimage;
 		}
-		public void setDeimage(String deimage) {
+		public void setDeimage(String[] deimage) {
 			this.deimage = deimage;
 		}
 		public String getRate() {
