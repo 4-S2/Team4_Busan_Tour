@@ -74,25 +74,3 @@
 	<img class="icon icon-top" src="../images/icon_top.png">
 </a>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var topButton = document.getElementById('topBtn');
-
-        // Show/hide the button based on scroll position
-        /* window.addEventListener('scroll', function () {
-            if (window.scrollY > 300) {
-                topButton.style.display = 'block';
-            } else {
-                topButton.style.display = 'none';
-            }
-        }); */
-
-        // Smooth scroll to the top when the button is clicked
-        topButton.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
