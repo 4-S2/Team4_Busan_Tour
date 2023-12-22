@@ -57,7 +57,80 @@
                         <div class="product-info">
                             <h1>${vo.ename }</h1>
                             <h3>${vo.eename }</h3>
-                            <p class="text-grey"></p>
+                            <p class="text-grey">
+                              <div class="product-table">
+                                <div class="product-table-cell">
+                                    <div>전시기간</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_width_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.s_date }~${vo.e_date }</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                                <div class="product-table-cell">
+                                    <div>전시분야</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_height_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.efield }</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                                <div class="product-table-cell">
+                                    <div>전시품목</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.eitem }</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                                <div class="product-table-cell">
+								<div>요금</div>
+									<div class="product-table-info">
+									    <c:choose>
+									        <c:when test="${vo.price == 0}">
+									            <div>무료</div>
+									        </c:when>
+									        <c:otherwise>
+									            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_weight_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.price} 원</div>
+									        </c:otherwise>
+									    </c:choose>
+									    <!-- <div>oz</div> -->
+									</div>
+                                </div>
+                                 <div class="product-table-cell">
+                                    <div>카테고리</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.cate }</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                                 <div class="product-table-cell">
+                                    <div>홈페이지</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.homepage }</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                                 <div class="product-table-cell">
+                                    <div>개최장소</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.loc }</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                                 <div class="product-table-cell">
+                                    <div>상세장소</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.loc_detail}</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                                 <div class="product-table-cell no-border-bottom">
+                                    <div>주최</div>
+                                    <div class="product-table-info">
+                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.host }</div>
+                                        <!-- <div>in</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                            	 </p>
                             <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-price">${vo.price }</div>
                             <div class="full-width">
                             
@@ -85,17 +158,7 @@
                         <!-- 상세 설명 -->
                         <div class="product-details-wrapper">
                             <div class="shop-header">
-                                <h5 class="no-margin">상세 설명</h5>
-                               <ul>
-                            	 <li><div>전시시간 : ${vo.s_date }~${vo.e_date }</div></li>
-                            	 <li><div>전시분야 : ${vo.efield }</div></li>
-                            	 <li><div>전시품목 : ${vo.eitem}</div></li>
-                            	 <li><div>카테고리 : ${vo.cate }</div></li>
-                            	 <li><div>홈페이지 : ${vo.homepage }</div></li>
-                            	 <li><div>개최장소 : ${vo.loc }</div></li>
-                            	 <li><div>상세장소 : ${vo.loc_detail }</div></li>
-                            	 <li><div>주  최 : ${vo.host }</div></li>
-                            	</ul>
+                           
                                 <div class="shop-header-line">
                                     <div class="shop-header-color green">
                                     
@@ -104,60 +167,11 @@
                             </div>
                             
                             <div class="product-details w-richtext">
-                            
-                            	<ul>
-                            	 <li><div>전시시간 : ${vo.s_date }~${vo.e_date }</div></li>
-                            	 <li><div>전시분야 : ${vo.efield }</div></li>
-                            	 <li><div>전시품목 : ${vo.eitem}</div></li>
-                            	 <li><div>카테고리 : ${vo.cate }</div></li>
-                            	 <li><div>홈페이지 : ${vo.homepage }</div></li>
-                            	 <li><div>개최장소 : ${vo.loc }</div></li>
-                            	 <li><div>상세장소 : ${vo.loc_detail }</div></li>
-                            	 <li><div>주  최 : ${vo.host }</div></li>
-                            	</ul>
                             </div>
                             
                             <!-- 해시 태그 -->
                             <div class="tag-list">
                             	<a href="#"><span></span></a>
-                            </div>
-                            
-                            <div class="product-table">
-                                <div class="product-table-cell">
-                                    <div>주소</div>
-                                    <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_width_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">38</div>
-                                        <!-- <div>in</div> -->
-                                    </div>
-                                </div>
-                                <div class="product-table-cell">
-                                    <div>전화번호</div>
-                                    <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_height_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">32</div>
-                                        <!-- <div>in</div> -->
-                                    </div>
-                                </div>
-                                <div class="product-table-cell">
-                                    <div>운영시간</div>
-                                    <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_length_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">21.5</div>
-                                        <!-- <div>in</div> -->
-                                    </div>
-                                </div>
-                                <div class="product-table-cell no-border-bottom">
-								<div>요금</div>
-									<div class="product-table-info">
-									    <c:choose>
-									        <c:when test="${vo.price == 0}">
-									            <div>무료</div>
-									        </c:when>
-									        <c:otherwise>
-									            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_weight_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.price}</div>
-									        </c:otherwise>
-									    </c:choose>
-									    <!-- <div>oz</div> -->
-									</div>
-                                </div>
                             </div>
                         </div>
                     </div>
