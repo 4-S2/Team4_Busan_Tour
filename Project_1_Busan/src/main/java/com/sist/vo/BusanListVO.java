@@ -1,5 +1,8 @@
 package com.sist.vo;
 
+/**
+ * 
+ */
 public class BusanListVO {
 		   private int no;
 		   private String title;
@@ -8,14 +11,28 @@ public class BusanListVO {
 		   private String cont;
 		   private String menu;
 		   private String addr;
-		   private String phone,restday,bhour,tag;
+		   private String phone,restday,bhour;
+		   private String[] tag;
 		   private String jjim;
 		   private int heart;
-		   private String deimage;
+		   private String[] deimage;
 		   private String rdate;
 		   private String rate;
 		
 		
+		
+		public String[] getTag() {
+			return tag;
+		}
+		public void setTag(String[] tag) {
+			this.tag = tag;
+		}
+		public String[] getDeimage() {
+			return deimage;
+		}
+		public void setDeimage(String[] deimage) {
+			this.deimage = deimage;
+		}
 		public String getRate() {
 			return rate;
 		}
@@ -82,12 +99,6 @@ public class BusanListVO {
 		public void setBhour(String bhour) {
 			this.bhour = bhour;
 		}
-		public String getTag() {
-			return tag;
-		}
-		public void setTag(String tag) {
-			this.tag = tag;
-		}
 		public String getJjim() {
 			return jjim;
 		}
@@ -99,12 +110,6 @@ public class BusanListVO {
 		}
 		public void setHeart(int heart) {
 			this.heart = heart;
-		}
-		public String getDeimage() {
-			return deimage;
-		}
-		public void setDeimage(String deimage) {
-			this.deimage = deimage;
 		}
 		public String getRdate() {
 			return rdate;

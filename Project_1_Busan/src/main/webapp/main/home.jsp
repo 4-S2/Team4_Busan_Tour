@@ -167,7 +167,7 @@
             <div role="list" class="products w-dyn-items">
                 <c:forEach var="vo" items="${exToplist}">
                 <div data-w-id="a677a252-157c-7121-064d-fe101c861b40" style="opacity:0" role="listitem" class="product-card-wrapper w-dyn-item">
-                    <a href="#" class="product-card w-inline-block">
+                    <a href="../busan/ex_detail.do?eno=${vo.eno }" class="product-card w-inline-block">
                         <div class="product-card-image-wrapper">
                             <img alt="" src="${vo.poster}" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" sizes="100vw" srcset=""/>
                         </div>

@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <title>Busan Tour | 전시 | ${title}</title>
+        <title>Busan Tour | 전시 | </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link href="../css/style.css" rel="stylesheet" type="text/css"/> 
@@ -55,9 +55,10 @@
                 <div class="wrapper side-paddings">
                     <div class="product">
                         <div class="product-info">
-                            <h1>제목</h1>
-                            <p class="text-grey">A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy. It is based on a number of factors.</p>
-                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-price">$ 30.00 USD</div>
+                            <h1>${vo.ename }</h1>
+                            <h3>${vo.eename }</h3>
+                            <p class="text-grey"></p>
+                            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_price_%22%2C%22to%22%3A%22innerHTML%22%7D%5D" class="product-price">${vo.price }</div>
                             <div class="full-width">
                             
                                 <form data-node-type="commerce-add-to-cart-form" data-commerce-sku-id="5bae129d35e11310a69a82d2" data-loading-text="Adding to cart..." data-commerce-product-id="5bae129d1c68cc806025c48d" class="w-commerce-commerceaddtocartform add-to-cart">
@@ -78,33 +79,42 @@
                         </div>
                         
                         <div class="product-image-wrapper">
-                            <img alt="대표 이미지" src="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min.png" data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_main_image_4dr%22%2C%22to%22%3A%22src%22%7D%5D" sizes="(max-width: 479px) 83vw, (max-width: 767px) 75vw, (max-width: 991px) 76vw, 32vw" srcset="https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min-p-500.png 500w, https://assets.website-files.com/5baddb6a35e113da0e9a4802/5bae12942ca03553bf0d536c_33903-2-plush-toy-transparent-image-min.png 1200w" class="full-width"/>
+                            <img  src="${vo.poster }"  />
                         </div>
                         
                         <!-- 상세 설명 -->
                         <div class="product-details-wrapper">
                             <div class="shop-header">
                                 <h5 class="no-margin">상세 설명</h5>
-                                <!-- <div class="sku">
-                                    <div>SKU: </div>
-                                    <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_sku_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">35009</div>
-                                </div> -->
+                               <ul>
+                            	 <li><div>전시시간 : ${vo.s_date }~${vo.e_date }</div></li>
+                            	 <li><div>전시분야 : ${vo.efield }</div></li>
+                            	 <li><div>전시품목 : ${vo.eitem}</div></li>
+                            	 <li><div>카테고리 : ${vo.cate }</div></li>
+                            	 <li><div>홈페이지 : ${vo.homepage }</div></li>
+                            	 <li><div>개최장소 : ${vo.loc }</div></li>
+                            	 <li><div>상세장소 : ${vo.loc_detail }</div></li>
+                            	 <li><div>주  최 : ${vo.host }</div></li>
+                            	</ul>
                                 <div class="shop-header-line">
-                                    <div class="shop-header-color green"></div>
+                                    <div class="shop-header-color green">
+                                    
+                                    </div>
                                 </div>
                             </div>
                             
                             <div class="product-details w-richtext">
-                            	<img src="" alt="상세 이미지"> 
-                            	
-                                <h4>Add Your Product Description</h4>
-                                <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content. A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing. For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Voila!</p>
-                                <h4>Simple &amp;Elegant Template</h4>
-                                <p>Headings, paragraphs, blockquotes, figures, images, and figure captions can all be styled after a class is added to the rich text element using the "When inside of" nested selector system.</p>
-                                <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action.</p>
-                                <h5>Perfect Choice for Your Business</h5>
-                                <p>Grabbing the consumer’s attention isn’t enough; you have to keep that attention for at least a few seconds. This is where your benefits come into play or a product description that sets your offer apart from the others.</p>
-                                <p>‍</p>
+                            
+                            	<ul>
+                            	 <li><div>전시시간 : ${vo.s_date }~${vo.e_date }</div></li>
+                            	 <li><div>전시분야 : ${vo.efield }</div></li>
+                            	 <li><div>전시품목 : ${vo.eitem}</div></li>
+                            	 <li><div>카테고리 : ${vo.cate }</div></li>
+                            	 <li><div>홈페이지 : ${vo.homepage }</div></li>
+                            	 <li><div>개최장소 : ${vo.loc }</div></li>
+                            	 <li><div>상세장소 : ${vo.loc_detail }</div></li>
+                            	 <li><div>주  최 : ${vo.host }</div></li>
+                            	</ul>
                             </div>
                             
                             <!-- 해시 태그 -->
@@ -135,11 +145,18 @@
                                     </div>
                                 </div>
                                 <div class="product-table-cell no-border-bottom">
-                                    <div>요금</div>
-                                    <div class="product-table-info">
-                                        <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_weight_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">24</div>
-                                        <!-- <div>oz</div> -->
-                                    </div>
+								<div>요금</div>
+									<div class="product-table-info">
+									    <c:choose>
+									        <c:when test="${vo.price == 0}">
+									            <div>무료</div>
+									        </c:when>
+									        <c:otherwise>
+									            <div data-wf-sku-bindings="%5B%7B%22from%22%3A%22f_weight_%22%2C%22to%22%3A%22innerHTML%22%7D%5D">${vo.price}</div>
+									        </c:otherwise>
+									    </c:choose>
+									    <!-- <div>oz</div> -->
+									</div>
                                 </div>
                             </div>
                         </div>
@@ -175,3 +192,4 @@
         <script src="https://assets.website-files.com/5badda2935e11303a89a461e/js/webflow.9828d3d6a.js" type="text/javascript"></script>
     </body>
 </html>
+

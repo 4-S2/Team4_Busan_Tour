@@ -24,9 +24,9 @@ public class BusanDetailModel {
 		  String no=request.getParameter("no");
 
 		  BusanDAO dao=new BusanDAO();
-		  List<BusanListVO> list=dao.foodDetailData(Integer.parseInt(no));
+		  BusanListVO vo=dao.foodDetailData(Integer.parseInt(no));
 		 
-		  request.setAttribute("list", list);
+		  request.setAttribute("vo", vo);
 		  //3. 결과값 모아서 request에 저장 
 		  request.setAttribute("main_jsp", "../busan/food_detail.jsp");
 		  return "../main/main.jsp";

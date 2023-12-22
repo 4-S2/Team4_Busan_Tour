@@ -137,7 +137,7 @@ public class BusanDAO {
    
 
    // 푸드 상세보기
-   public List<BusanListVO> foodDetailData(int no)
+   public BusanListVO foodDetailData(int no)
    {
 	   /*
 	    * private int no;
@@ -153,7 +153,7 @@ public class BusanDAO {
 		   private String deimage;
 		   private String rdate;
 	    */
-	   List<BusanListVO> list=new ArrayList<>();
+	   BusanListVO vo=new BusanListVO();
 	   try
 	   {
 		   // 1. 연결 
@@ -166,7 +166,7 @@ public class BusanDAO {
 		   // 4. 실행후에 결과값을 받는다 
 		   ResultSet rs=ps.executeQuery();
 		   rs.next();
-		   BusanListVO vo=new BusanListVO();
+		   
 		   vo.setNo(rs.getInt(1));
 	       vo.setTitle(rs.getString(2));
 		   vo.setPoster(rs.getString(3));
@@ -177,12 +177,15 @@ public class BusanDAO {
 		   vo.setPhone(rs.getString(8));
 		   vo.setRestday(rs.getString(9));
 		   vo.setBhour(rs.getString(10));
-		   vo.setTag(rs.getString(11));
+			String tag = rs.getString(11);
+			String[] tags = tag.split("#");
+		   vo.setTag(tags);
 		   vo.setJjim(rs.getString(12));
 		   vo.setHeart(rs.getInt(13));
-		   vo.setDeimage(rs.getString(14));
+			String dimage = rs.getString(14);
+			String[] dimgs = dimage.split("\\^");
+		   vo.setDeimage(dimgs);
 		   vo.setRdate(rs.getString(15));
-		   list.add(vo);
 		   rs.close();
 	   }catch(Exception ex)
 	   {
@@ -194,7 +197,7 @@ public class BusanDAO {
 		   // 반환 => 재사용 
 		   dbconn.disConnection(conn, ps);
 	   }
-	   return list;
+	   return vo;
    }
    //부산 상세보기
    public BusanListVO busanDetailData(int no,String tab)
@@ -223,8 +226,12 @@ public class BusanDAO {
 		   vo.setBhour(rs.getString(9));
 		   vo.setJjim(rs.getString(10));
 		   vo.setHeart(rs.getInt(11));
-		   vo.setDeimage(rs.getString(12));
-		   vo.setTag(rs.getString(13));
+			String dimage = rs.getString(12);
+			String[] dimgs = dimage.split("\\^");
+		   vo.setDeimage(dimgs);
+			String tag = rs.getString(13);
+			String[] tags = tag.split("#");
+		   vo.setTag(tags);
 		   }
 		   rs.close();
 	   }catch(Exception ex)
